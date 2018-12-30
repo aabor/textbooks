@@ -1,0 +1,79 @@
+% !TeX program = lualatex -synctex=1 -interaction=nonstopmode --shell-escape %.tex
+\documentclass[beamer,xcolor=dvipsnames]{standalone}
+\usepackage{borochkin_unicode_symbols}
+\RequirePackage[rus]{borochkin_tikz}
+
+\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+
+\begin{document}
+\begin{standaloneframe}[shrink=0, fragile]
+\begin{tikzpicture}
+\tikzstyle{line} = [ draw, -latex']
+\tikzstyle{block} = [draw, fill=white, rectangle, 
+minimum height=1.5em, minimum width=6em, 
+text width=3cm,align=center, 
+text height=4ex, text depth=3ex,]
+\tikzstyle{wideblock} = [draw, fill=white, rectangle, 
+minimum height=1.5em, minimum width=6em, 
+text width=7cm,align=center, 
+text height=4ex, text depth=3ex,]
+\node (seller) at (0.5,2.5) [block] {Поставщик};	  
+\node (buyer) at (4.5,2.5) [block] {Покупатель};
+\node (bank) at (2.5,0) [wideblock] {Банк-фактор};
+
+\onslide<2->{
+	\draw[thick, <->] 
+	($(bank.north east) + (-2.5,0)$) 
+	to node[left,swap] {1} 
+	($(bank.north east) + (-2.5,1)$); 
+}
+\onslide<3->{
+	\draw[thick, <->] 
+	($(bank.north west) + (.5,0)$) 
+	to node[left,swap] {2} 
+	($(bank.north west) + (.5,1)$); 
+}
+
+\onslide<4->{
+	\draw[thick, ->] 
+	($(seller.east) + (0,.5)$) 
+	to node[above,swap] {3} 
+	($(seller.east) + (.75,.5)$);
+}
+
+\onslide<5->{
+	\draw[thick, ->] 
+	($(seller.east) + (0,-.5)$) 
+	to node[above,swap] {4} 
+	($(seller.east) + (.75,-.5)$);
+}
+
+\onslide<6->{
+	\draw[thick, <-] 
+	($(bank.north east) + (-1.5,0)$) 
+	to node[left,swap] {5} 
+	($(bank.north east) + (-1.5,1)$); 
+}
+\onslide<7->{
+	\draw[thick, ->] 
+	($(bank.north west) + (1.5,0)$) 
+	to node[left,swap] {6} 
+	($(bank.north west) + (1.5,1)$); 
+}
+
+\onslide<8->{
+	\draw[thick, <-] 
+	($(bank.north east) + (-.5,0)$) 
+	to node[left,swap] {7} 
+	($(bank.north east) + (-.5,1)$); 
+}
+\onslide<9->{
+	\draw[thick, ->] 
+	($(bank.north west) + (2.5,0)$) 
+	to node[left,swap] {8} 
+	($(bank.north west) + (2.5,1)$); 
+}
+\end{tikzpicture}
+\end{standaloneframe}
+\end{document}

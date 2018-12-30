@@ -1,0 +1,54 @@
+% !TeX program = lualatex -synctex=1 -interaction=nonstopmode --shell-escape %.tex
+\documentclass[beamer,xcolor=dvipsnames]{standalone}
+\RequirePackage[rus]{borochkin_tikz}
+
+\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+
+\begin{document}
+\begin{standaloneframe}[shrink=0, fragile]
+\begin{tikzpicture}[x=10cm,y=.12cm, scale=7]
+\tikzset{
+	dot/.style={circle,inner sep=1pt,fill,name=#1},
+}
+% grid 
+%\draw[step=.005cm,gray,very thin] (0,0) grid (28,.12);
+
+% Draw axes
+\coordinate (center) at (.03,20);
+
+\draw [<->,thick] (.03,28) node (yaxis) [above]{$D,L$}--(center)
+-- (.11,20) node (xaxis) [right] {$r$};
+\node[dot=center, label=below:3\%] at (center) {};
+\node[dot=center, label=left:20] at (center) {};
+
+\draw[domain=.045:.055,smooth,variable=\x,black, name path=Dd] 
+plot ({\x},{50-500*\x}) node[anchor=  west, black]{$D^d$};
+
+\draw[domain=.04:.06,smooth,variable=\x,black, name path=Ds] 
+plot ({\x},{10+300*\x}) node[anchor=  west, black]{$D^s$};
+
+\draw[domain=.08:.1,smooth,variable=\x,black, name path=Ld] 
+plot ({\x},{43-200*\x}) node[anchor=  west, black]{$L^d$};
+
+\draw[domain=.08:.1,smooth,variable=\x,black, name path=Ls] 
+plot ({\x},{16+100*\x}) node[anchor=  west, black]{$L^s$};
+
+
+\path [name intersections={of=Dd and Ds,by=eqD}];
+\path [name intersections={of=Ld and Ls,by=eqL}];
+%
+\draw[dashed] (yaxis |- eqD) node[left] {$D^*,L^*=25$}
+-| (xaxis -| eqD) node[below] {$r_D^*=5\%$};
+\node[dot=eqD, label={[anchor=south east]$E_D$}] at (eqD) {};
+%
+\draw[dashed] (yaxis |- eqL)
+-| (xaxis -| eqL)node[below] {$r_L^*=9\%$};
+\node[dot=eqL, label={[anchor=west]$E_L$}] at (eqL) {};
+
+
+
+\end{tikzpicture}
+
+\end{standaloneframe}
+\end{document}

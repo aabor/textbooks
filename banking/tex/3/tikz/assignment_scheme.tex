@@ -1,0 +1,48 @@
+% !TeX program = lualatex -synctex=1 -interaction=nonstopmode --shell-escape %.tex
+\documentclass[beamer,xcolor=dvipsnames]{standalone}
+\geometry{papersize={9cm,4cm}}
+\usepackage{borochkin_unicode_symbols}
+\RequirePackage[rus]{borochkin_tikz}
+
+\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+
+\begin{document}
+\begin{standaloneframe}[shrink=0, fragile]
+\begin{tikzpicture}
+\tikzstyle{line} = [ draw, -latex']
+\tikzstyle{block} = [draw, fill=white, rectangle, 
+minimum height=1.5em, minimum width=6em, text width=3cm,align=center, text height=3ex, text depth=2ex,]
+
+\tikzstyle{block_two_line} = [draw, fill=white, rectangle, 
+minimum height=1.5em, minimum width=6em, 
+text width=3cm,align=center, 
+text height=2ex, text depth=3ex]
+
+\coordinate (yd)   at (0,.5);
+\coordinate (xd)   at (0.5,0);
+
+\node (creditor) at (2.5,0) [block_two_line] {Кредитор (цессионарий)};
+\node (borrower) at (0,-2.5) [block_two_line] {Заемщик (цедент)};
+\node (debtor) at (5,-2.5) [block] {Дебитор};
+
+\onslide<2->{
+	\draw[thick, ->] (borrower) to node[auto,swap] {1} (debtor);
+}
+
+\onslide<3->{
+	\draw[thick, <->] (borrower) to node[auto,swap] {2} (creditor);
+}
+
+\onslide<4->{
+	\draw[thick, line, rounded corners,->] (borrower.north) 
+	node[left, yshift=1cm] {3} 
+	|- (creditor.west);
+}
+
+\onslide<5->{
+	\draw[thick,rounded corners, ->] (creditor) -| node[right, yshift=-1cm,swap] {4}  (debtor);
+}
+\end{tikzpicture}
+\end{standaloneframe}
+\end{document}

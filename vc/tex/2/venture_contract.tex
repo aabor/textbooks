@@ -1,0 +1,428 @@
+% !TeX program = lualatex -synctex=1 -interaction=nonstopmode --shell-escape %.tex
+
+\documentclass[_Venture_p2.tex]{subfiles}
+
+\begin{document}
+
+\setbeamercovered{invisible}
+
+\subsection{Декларация о намерениях}
+\begin{frame}[shrink=5]{}
+\begin{block}{Декларация о намерениях (Term Sheet)}
+\quad
+— это небольшой по объему документ, в котором указываются финансовые и другие параметры предстоящей инвестиционной сделки.
+\end{block}
+Хотя Term Sheet не носит юридически обязывающий характер, в венчурном бизнесе не принято отказываться от прописанных в нем и согласованных всеми сторонами условий. 
+
+Отказ влечет за собой потерю репутации. 
+
+Декларация о намерениях конфиденциальна как для предпринимателя, так и для венчурного инвестора.
+\end{frame}
+
+\subsection{Конфликт интересов}	
+\begin{frame}{Конфликт интересов инвесторы - менеджмент}{Основные источники}
+1.	Оппортунистическое поведение одной из сторон.
+
+2.	Несогласие сторон по разделу выручки при ``выходе`` из компании, ее ликвидации или продаже. 
+
+3.	Риск ``размывания`` доли какой-либо стороны.
+
+4. Утрата инвестором контрольных позиций в компании.
+
+\end{frame}
+
+\subsection{Финансовые инструменты}
+\begin{frame}{Финансовые инструменты}
+\begin{figure}
+	\centering
+	\includegraphics[scale=.8,
+	%trim={<left> <lower> <right> <upper>}				
+	,trim={0.5cm 5cm 0cm 0cm},clip	
+	] {tikz/venture_financial_instruments}
+	\caption{\captionf{Финансовые инструменты, используемые в договоре о венчурном финансировании}}
+\end{figure}
+\end{frame}
+
+\subsection{Декларация о намерениях}
+\begin{frame}{Декларация о намерениях}{Term sheet}
+\begin{table}
+	\centering
+	\footnotesize
+	\caption{\captionf{Структура декларации о намерениях}}
+	\begin{tabularx}{\textwidth}[t]{@{}X@{}}
+		\setrulecolor\toprule
+		\cnamef{Тип активов и структура капитала}\\\midrule 
+				\tabitem тип и цены активов (ценных бумаг);\\				
+				\tabitem общая сумма сделки;\\				
+				\tabitem цена до финансирования (pre-money);\\				
+				\tabitem цена после финансирования (post-money);\\ 
+				\tabitem распределение голосов между инвестором и основателями компании, между владельцами обыкновенных и привилегированных акций;\\
+				\tabitem условия vesting, covenants.
+		\\\bottomrule
+	\end{tabularx} 
+\end{table}
+\end{frame}
+
+\begin{frame}{Декларация о намерениях}{Term sheet}
+\begin{table}
+	\centering
+	\footnotesize
+	\caption{\captionf{Структура декларации о намерениях}}
+	\begin{tabularx}{\textwidth}[t]{@{}X@{}}
+		\setrulecolor\toprule
+		\cnamef{Совет директоров}\\\midrule 
+		\tabitem состав, права и компетенция совета директоров компании;\\
+		\tabitem представительство инвестора в совете директоров. 
+		\\\midrule
+		\cnamef{Корпоративное управление }\\\midrule 
+		\tabitem вопросы управления компанией;\\
+		\tabitem стандарт отчетности (ежеквартальный и ежегодный) и аудит. 
+		\\\bottomrule
+	\end{tabularx} 
+\end{table}
+\end{frame}
+
+
+\begin{frame}{Декларация о намерениях}{Term sheet}
+\begin{table}
+	\centering
+	\footnotesize
+	\caption{\captionf{Структура декларации о намерениях}}
+	\begin{tabularx}{\textwidth}[t]{@{}X@{}}
+		\setrulecolor\toprule
+		\cnamef{Режим работы ключевых сотрудников }\\\midrule 
+			\tabitem конфиденциальность;\\
+			\tabitem схемы бонусов;\\
+			\tabitem опционы.
+		\\\midrule
+		\cnamef{Дивиденды}\\\midrule 
+			\tabitem режим выплаты дивидендов для сотрудников.
+		\\\midrule		
+		\cnamef{Ликвидационные предпочтения}\\\midrule 
+			\tabitem распределение активов компании при продаже / ликвидации.
+		\\\bottomrule
+	\end{tabularx} 
+\end{table}
+\end{frame}
+
+\begin{frame}{Декларация о намерениях}{Term sheet}
+\begin{table}
+	\centering
+	\footnotesize
+	\caption{\captionf{Структура декларации о намерениях}}
+	\begin{tabularx}{\textwidth}[t]{@{}X@{}}
+		\setrulecolor\toprule
+		\cnamef{Ограничения на действия менеджеров}\\\midrule 
+			\tabitem порядок изменения структуры собственности;\\
+			\tabitem порядок выпуска новых акций;\\
+			\tabitem порядок возможной продажи компании;\\
+			\tabitem процедура продажи активов;\\
+			\tabitem процедура выплаты дивидендов;\\
+			\tabitem процедура ликвидации компании.
+		 \\\midrule
+		\cnamef{Компенсация ``размывания``}\\\midrule 
+			\tabitem меры по защите интересов инвесторов и основателей при ``размывании``.
+		\\\bottomrule
+	\end{tabularx} 
+\end{table}
+\end{frame}
+
+\begin{frame}{Декларация о намерениях}{Term sheet}
+\begin{table}
+	\centering
+	\footnotesize
+	\caption{\captionf{Структура декларации о намерениях}}
+	\begin{tabularx}{\textwidth}[t]{@{}X@{}}
+		\setrulecolor\toprule
+		\cnamef{Меры по защите интересов инвесторов при продаже акций одним из них}\\\midrule 
+			\tabitem первый отказ;\\
+			\tabitem присоединение к продаже;\\
+			\tabitem одновременная продажа;\\
+			\tabitem плата за участие.
+		\\\bottomrule
+	\end{tabularx} 
+\end{table}
+\end{frame}
+
+\begin{frame}{Декларация о намерениях}{Term sheet}
+\begin{table}
+	\centering
+	\footnotesize
+	\caption{\captionf{Структура декларации о намерениях}}
+	\begin{tabularx}{\textwidth}[t]{@{}X@{}}
+		\setrulecolor\toprule
+		\cnamef{Тип выхода}\\\midrule 
+			\tabitem продажа доли инвестора другому стратегическому инвестору;\\
+			\tabitem первичное размещение акций компании на фондовом рынке (IPO);\\
+			\tabitem выкуп доли инвестора менеджментом (MBO).			
+		\\\midrule
+		\cnamef{Прочие условия}\\\midrule 
+			\tabitem порядок получения инвестором информации о компании;\\
+			\tabitem условия осуществления сделки; \\
+			\tabitem расходы на совершение сделки.
+		\\\bottomrule
+	\end{tabularx} 
+\end{table}
+\end{frame}
+
+\subsection{Размывание капитала}
+\begin{frame}[allowframebreaks]{Размывание капитала}{Защита интересов акционеров при понижающих раундах финансирования}
+\begin{block}{Понижающие раунды}
+	\quad
+	- раунды финансирования при которых из-за возросших рисков и последующего снижения стоимости компании, цена акций нового выпуска будет меньше той, которую заплатили первоначальные инвесторы.
+\end{block}
+
+\pagebreak
+
+\begin{block}{Размывание капитала}
+	\quad
+	- это снижение доли основателя компании и первоначальных инвесторов в ходе понижающих раундов финансирования.
+\end{block}
+\end{frame}
+
+\begin{frame}{Различное употребление термина ``размывание`` капитала}{}
+\begin{itemize}
+	\item каждый новый претендент на активы либо доход предприятия уменьшает процентную долю прежних собственников;
+	\item если новые раунд финансирования привел к увеличению прибыли компании и её стоимости, то такая практика не считается размывающей.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Проблема размывания... }{Какому критерию придают наибольшее значение при вычислении стоимости инвестиций?}
+\begin{itemize}
+	\item доход на акцию;
+	\item денежный поток или валовая выручка в расчете на акцию;
+	\item рентабельность активов.
+\end{itemize}
+Финансирование, которое приводит к улучшению выбранного критерия, не считается размывающим.
+\end{frame}
+
+\begin{frame}{Методы защиты инвесторов от размывания капитала}
+\begin{block}{Метод полного отката}
+	\quad
+	- если новая партия акций выпускается по меньшей совокупной цене, то цена конвертации для существующих привилегированных акций автоматически уменьшается, ``откатывается``, до меньшей цены.
+\end{block}
+\end{frame}
+
+\begin{frame}
+% Table generated by Excel2LaTeX from sheet 'Лист1'
+\begin{table}[htbp]
+	\centering
+	\footnotesize
+	\caption{\captionf{Размывающее финансирование}}
+	\begin{tabularx}{\linewidth}[b]{@{}>{\raggedright\arraybackslash}crrrr@{}}
+	\setrulecolor\toprule
+		\multirow{2}[0]{*}{\cnamef{Акционеры}} & \multicolumn{2}{c}{\cnamef{до}}  & \multicolumn{2}{c}{\cnamef{после}} \\\cmidrule(r){2-3}\cmidrule(l){4-5}
+		 & \cnamef{\%}    & \cnamef{₽}     & \cnamef{\%}    & \cnamef{₽} \\
+		\midrule
+		X     & 50,00\% &      500 000 ₽  & 37,50\% &            150 000 ₽  \\
+		Y     & 50,00\% &      500 000 ₽  & 37,50\% &            150 000 ₽  \\
+		Z     &       &       & 25,00\% &            100 000 ₽  \\
+		\midrule
+		\multicolumn{2}{@{}l}{Стоимость компании} &   1 000 000 ₽  &       &            400 000 ₽  \\
+		\bottomrule
+	\end{tabularx}%
+	\label{tab:addlabel}%
+\end{table}%
+\end{frame}
+
+
+\begin{frame}
+% Table generated by Excel2LaTeX from sheet 'Лист1'
+\begin{table}[htbp]
+	\centering
+	\footnotesize
+	\caption{\captionf{Неразмывающее финансирование}}
+	\begin{tabularx}{\linewidth}[b]{@{}>{\raggedright\arraybackslash}crrrr@{}}
+		\setrulecolor\toprule
+		\multirow{2}[0]{*}{\cnamef{Акционеры}} & \multicolumn{2}{c}{\cnamef{до}}  & \multicolumn{2}{c}{\cnamef{после}} \\\cmidrule(r){2-3}\cmidrule(l){4-5}
+		& \cnamef{\%}    & \cnamef{₽}     & \cnamef{\%}    & \cnamef{₽} \\
+		\midrule
+		X     & 50,00\% &      500 000 ₽  & 37,50\% &            600 000 ₽  \\
+		Y     & 50,00\% &      500 000 ₽  & 37,50\% &            600 000 ₽  \\
+		Z     &       &       & 25,00\% &            400 000 ₽  \\
+		
+		\midrule
+		\multicolumn{2}{@{}l}{Стоимость компании} &   1 000 000 ₽  &       &            1 600 000 ₽  \\
+		\bottomrule
+	\end{tabularx}%
+	\label{tab:addlabel}%
+\end{table}%
+\end{frame}
+
+
+\begin{frame}
+% Table generated by Excel2LaTeX from sheet 'Лист1'
+\begin{table}[htbp]
+	\centering
+	\footnotesize
+	\caption{\captionf{Долговое финансирование не воспринимается как размывающее}}
+	\begin{tabularx}{\linewidth}[b]{@{}>{\raggedright\arraybackslash}crrrr@{}}
+		\setrulecolor\toprule
+		\multirow{2}[0]{*}{\cnamef{Акционеры}} & \multicolumn{2}{c}{\cnamef{до}}  & \multicolumn{2}{c}{\cnamef{после}} \\\cmidrule(r){2-3}\cmidrule(l){4-5}
+		& \cnamef{\%}    & \cnamef{₽}     & \cnamef{\%}    & \cnamef{₽} \\
+		\midrule
+	    X     & 50,00\% &      500 000 ₽  & 50,00\% &            500 000 ₽  \\
+		Y     & 50,00\% &      500 000 ₽  & 50,00\% &            500 000 ₽  \\
+		Z     &       &       & 0,00\% &         1 000 000 ₽  \\
+		Активы &       &       &       &         2 000 000 ₽  \\
+		\midrule
+		\multicolumn{2}{@{}l}{Стоимость компании} &   1 000 000 ₽  &       &           1 000 000 ₽  \\
+		\bottomrule
+	\end{tabularx}%
+	\label{tab:addlabel}%
+\end{table}%
+\end{frame}
+
+\begin{frame}{Защита инвесторов от размывания их доли в капитале}
+% Table generated by Excel2LaTeX from sheet 'Лист1'
+\begin{table}[htbp]
+	\centering
+	\scriptsize
+	\caption{\captionf{Метод полного отката}}
+	\begin{tabularx}{\linewidth}
+		[b]{@{}>{\raggedright\arraybackslash}Xrrrr@{}}
+		\setrulecolor\toprule
+		\cnamef{Акции} & \cnamef{Кол-во} & \cnamef{\%}    & \cnamef{Цена}     & \cnamef{₽} \\
+		\midrule
+		\multicolumn{5}{@{}l}{\cnamef{до финансирования  }}\\
+		\midrule
+		Обыкновенные &                 1 000 000    & 50,00\% &                     1 ₽  &         1 000 000 ₽  \\
+		Прив. Серия А &                 1 000 000    & 50,00\% &                     1 ₽  &         1 000 000 ₽  \\
+		\multicolumn{3}{@{}l}{Стоимость компании}       &       &         2 000 000 ₽  \\
+		\midrule
+		\multicolumn{5}{@{}l}{\cnamef{после финансирования}  }\\
+		\midrule
+		Обыкновенные &                 1 000 000    & 32,79\% &               0,50 ₽  &            500 000 ₽  \\
+		Прив. Серия А &                 2 000 000    & 65,57\% &               0,50 ₽  &         1 000 000 ₽  \\
+		Прив. Серия Б &                       50 000    & 1,64\% &               0,50 ₽  &              25 000 ₽  \\
+		\multicolumn{3}{@{}l}{Стоимость компании}        &       &         1 525 000 ₽  \\
+		\bottomrule
+	\end{tabularx}%
+	\label{tab:addlabel}%
+\end{table}%
+\end{frame}
+
+\begin{frame}{}
+\begin{block}{Метод средне-взвешенного отката}
+	\quad
+	- позволяет уменьшить старую цену конвертации до числа, находящегося  в интервале между старой и новой ценой, меньшей по величине и, потому ``размывающей``.
+\end{block}
+\end{frame}
+
+
+\begin{frame}{Защита инвесторов от размывания их доли в капитале}{Метод средне-взвешенного отката}
+Определение новой цены конвертации:
+$\frac{A+C}{A+D} \cdot Price_{old},$ 
+
+где
+$Price_{old}$ - старая цена конвертации;
+
+A – количество акций, находящихся в обращении, до нового выпуска;
+
+C – количество вновь выпускаемых акций, при условии, что они продаются по новой цене;
+
+D - количество вновь выпускаемых акций, при условии, что они продаются по цене предыдущего раунда финансирования.
+
+\end{frame}
+
+\begin{frame}{Защита инвесторов от размывания их доли в капитале}
+% Table generated by Excel2LaTeX from sheet 'Лист1'
+\begin{table}[htbp]
+	\centering
+	\scriptsize
+	\caption{\captionf{Метод средне-взвешенного отката}}
+	\begin{tabularx}{\linewidth}
+		[b]{@{}>{\raggedright\arraybackslash}Xrrrr@{}}
+		\setrulecolor\toprule
+		\cnamef{Акции} & \cnamef{Кол-во} & \cnamef{\%}    & \cnamef{Цена}     & \cnamef{₽} \\
+		\midrule
+		\multicolumn{5}{@{}l}{\cnamef{после финансирования  }}\\
+		\midrule
+		Обыкновенные &                 1 000 000    & 48,49\% &               0,50 ₽  &            500 000 ₽  \\
+		\midrule
+		Прив. Серия А &                 ??    & 49,09\% &               0,50 ₽  &            506 173 ₽  \\
+		Прив. Серия Б &                       50 000    & 2,42\% &               0,50 ₽  &              25 000 ₽  \\
+		\multicolumn{3}{@{}l}{Стоимость компании}        &       &          1 031 173 ₽ \\
+		\bottomrule
+	\end{tabularx}%
+	\label{tab:addlabel}%
+\end{table}%
+
+\end{frame}
+
+\iftagged{professor}
+{
+\begin{frame}{Защита инвесторов от размывания их доли в капитале}
+% Table generated by Excel2LaTeX from sheet 'Лист1'
+\begin{table}[htbp]
+	\centering
+	\scriptsize
+	\caption{\captionf{Метод средне-взвешенного отката}}
+	\begin{tabularx}{\linewidth}
+		[b]{@{}>{\raggedright\arraybackslash}Xrrrr@{}}
+		\setrulecolor\toprule
+		\cnamef{Акции} & \cnamef{Кол-во} & \cnamef{\%}    & \cnamef{Цена}     & \cnamef{₽} \\
+		\midrule
+		\multicolumn{5}{@{}l}{\cnamef{после финансирования  }}\\
+		\midrule
+	    Обыкновенные &                 1 000 000    & 48,49\% &               0,50 ₽  &            500 000 ₽  \\
+		\midrule
+		Прив. Серия А &                 1 012 346    & 49,09\% &               0,50 ₽  &            506 173 ₽  \\
+		Прив. Серия Б &                       50 000    & 2,42\% &               0,50 ₽  &              25 000 ₽  \\
+		\multicolumn{3}{@{}l}{Стоимость компании}        &       &          1 031 173 ₽ \\
+		\bottomrule
+	\end{tabularx}%
+	\label{tab:addlabel}%
+\end{table}%
+Скорректированная цена конвертации Серии А: $\frac{2000000 + 25000 }{2000000 +50000 } =0,9878~₽$ 
+
+\end{frame}
+}
+
+\subsection{Варранты}
+\begin{frame}{Варранты}{Защита интересов акционеров при понижающих раундах финансирования}
+	\begin{block}{Варрант}
+		\quad - это разновидность опциона, дает право на покупку новой акции по установленной акционерами цене, так называемой подписной цене, которая ниже рыночной. Каждый из прежних акционеров получает право на покупку такого количества новых акций по подписной цене, которое не меняет долю его пакета в общем количестве старых и новых акций. Применяется для защиты акционеров от размывания их долей в капитале компании.
+	\end{block}
+	
+\end{frame}
+
+\begin{frame}
+Равновесная цена варранта, определяется так, что прежним акционерам было безразлично, покупать ли им самим дополнительно выпущенные акции или продать варрант другим лицам.
+\end{frame}
+
+\begin{frame}
+Сразу после размещения дополнительных акций их рыночный курс определяется по формуле:
+\begin{align}
+P_1&=\frac{P_0 \cdot N + P' \cdot n}{N + n}\\
+P_1-P_0 &=\frac{(P_0 - P') \cdot n }{N+n}
+\end{align}
+где
+
+$P_0, P_1$ - рыночный курс акций компании, соответственно до и после размещения дополнительного выпуска акций;
+
+$N, n$ - количество акций в обращении и дополнительный объем выпущенных акций;
+
+$P'$ - подписная цена новой акции $P'< P_1$.
+\end{frame}
+
+\begin{frame}
+Равновесная цена варранта определяется из следующего равенства:
+\begin{align}
+P'+ \frac{N}{n} \cdot x = \frac{P_0 \cdot N + P' \cdot n}{N + n}
+\end{align}
+В левой части равенства стоит сумма денег, которую должен заплатить новый акционер за покупку одной акции (подписная цена плюс расходы на покупку $N / n$ варрантов, необходимых для ее приобретения), а в правой — рыночная цена акции после разбавления капитала фирмы.
+\end{frame}
+
+\begin{frame}
+Равновесная цена варранта равна:
+\begin{align}
+x=\frac{P_0 - P'}{N/n + 1}
+\end{align}
+
+При любой другой цене варранта возможно извлечение арбитражной прибыли.
+\end{frame}
+
+
+\end{document}
+

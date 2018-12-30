@@ -1,0 +1,11 @@
+% !TeX program = lualatex -synctex=1 -interaction=nonstopmode --shell-escape %.tex
+\documentclass[beamer]{standalone}
+\RequirePackage[rus]{borochkin_tikz}
+
+\begin{document}
+\begin{standaloneframe}[shrink=23, fragile]
+\begin{tikzpicture}
+\draw[->] (0,0) -- (1,1);
+\end{tikzpicture}
+\end{standaloneframe}
+\end{document}

@@ -1,0 +1,23 @@
+\documentclass{beamer}
+\usepackage{lipsum}
+
+\newcommand\Fontvi{\fontsize{6}{7.2}\selectfont}
+
+\newcommand{\add}[2]{\textit{#1} {`#2'}}
+
+\newcommand\setfontsize[1]{\fontsize{#1}{44}\selectfont}
+\begin{document}
+
+\begin{frame}
+\frametitle{Frame with reduced font size}
+\Fontvi
+\lipsum[1]
+\end{frame}
+
+\begin{frame}[t]{\setfontsize{6pt} Frame with regular font size Frame with regular font size Frame with regular font size Frame with regular font size Frame with regular font size Frame with regular font size Frame with regular font size Frame with regular font size Frame with regular font size}
+\add{aaa}{bbb}
+
+\lipsum[1]
+\end{frame}
+
+\end{document}

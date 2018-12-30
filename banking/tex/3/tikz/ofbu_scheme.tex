@@ -1,0 +1,41 @@
+% !TeX program = lualatex -synctex=1 -interaction=nonstopmode --shell-escape %.tex
+\documentclass[beamer,xcolor=dvipsnames]{standalone}
+\usepackage{borochkin_unicode_symbols}
+\RequirePackage[rus]{borochkin_tikz}
+
+\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+
+\begin{document}
+\begin{standaloneframe}[shrink=0, fragile]
+	\tikzstyle{block} = [draw, fill=white, rectangle, 
+minimum height=1.5em, minimum width=6em, text width=2cm,align=center, text height=4ex, text depth=3ex,]
+\begin{tikzpicture}[auto, node distance=0.3cm,>=latex']
+\node [block] (founders) {Учредители}; 
+\node [block, xshift=3em, below left=2cm of founders] (bank) {Банк};       
+\node [block, xshift=-3em, below right=2cm of founders] (ofbu) {ОФБУ};       
+
+\onslide<2->{
+	\draw[->] (founders.north west)+(0,-.2) to [bend right] node[auto,swap] {1} (bank);
+}
+\onslide<3->{
+	\draw[->] (bank.north) to node[xshift=1.5em, yshift=-1.6em] {2} (founders.west);
+}
+\onslide<4->{
+	\draw[->] (founders.east) to node[yshift=.1em] {3} (ofbu.north);
+}
+\onslide<5->{
+	\draw[->] (bank.east) to node[xshift=0em, yshift=0em] {4} (ofbu.west);
+}
+\onslide<6->{
+	\draw[->] (bank)to [bend right] node[auto,swap, xshift=-1.5em, yshift=1.5em] {5} (founders);
+}
+\onslide<7->{	
+	\draw[->] (ofbu)to [bend left=30] node[auto,swap, xshift=0em, yshift=0em] {6} (bank);
+}
+\onslide<8->{
+	\draw[->] (ofbu)to [bend left=30] node[auto,swap, xshift=0em, yshift=0em] {7} (founders);
+}
+\end{tikzpicture}
+\end{standaloneframe}
+\end{document}

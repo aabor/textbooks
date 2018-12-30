@@ -1,0 +1,66 @@
+% !TeX program = lualatex -synctex=1 -interaction=nonstopmode --shell-escape %.tex
+\documentclass[beamer,xcolor=dvipsnames]{standalone}
+\RequirePackage[rus]{borochkin_tikz}
+
+\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+
+\begin{document}
+\begin{standaloneframe}[shrink=27, fragile]
+\begin{forest}
+	basic/.style = {draw, thin, drop shadow, font=\sffamily},
+	my root/.style = {basic, rounded corners=4pt, align=C{8cm}, fill=beamer@nngudarkblue, text=white},
+	upper style/.style = {basic, rounded corners=6pt, align=C{10em}, fill=beamer@nngudarkblue!80, text=white},
+	lower style/.style = {basic, align=L{8.5em}, fill=beamer@nngudarkblue!60, text=white},
+	for tree={%
+		edge={->},
+		/tikz/>=LaTeX,
+	},
+	where level=0{%
+		my root,
+		for tree={%
+			if={level()==1}{%
+				upper style,
+			}{%
+				if={level()==2}{%
+					lower style,
+				}{}
+			},
+			if={level()<1}{%
+				if={isodd(n_children())}{%
+					calign=child edge,
+					calign primary child/.wrap pgfmath arg={#1}{int((n_children()+1)/2)},
+				}{%
+					calign=edge midpoint,
+				},
+			}{%
+				folder,
+				grow'=0,
+			},
+		},
+	}{},
+	[Научно-технологические циклы
+	[виды, for tree={align=C{12em}},
+	[Сверхдолгосрочные (способы производства)]
+	[Долгосрочные (технологические уклады)]
+	[Среднесрочные (поколения техники и технологий)]
+	[Краткосрочные (модели техники и модификации технологий)]
+	]
+	[фазы
+	[зарождение]
+	[инновация]
+	[диффузия]
+	[зрелость]
+	[кризис]
+	[реликт]
+	]
+	[структура
+	[научные]
+	[изобретательские]
+	[инновационно-инвестиционные]
+	[технологические (технические)]
+	]
+	]
+\end{forest}
+\end{standaloneframe}
+\end{document}

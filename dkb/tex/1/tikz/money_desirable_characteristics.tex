@@ -1,0 +1,27 @@
+% !TeX program = lualatex -synctex=1 -interaction=nonstopmode --shell-escape %.tex
+\documentclass[beamer,xcolor=dvipsnames]{standalone}
+\RequirePackage[rus]{borochkin_tikz}
+
+\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+
+\begin{document}
+\begin{standaloneframe}[shrink=0, fragile]
+\begin{tikzpicture}[mindmap, concept color=gray!50, font=\sf, text=white]
+
+\tikzstyle{level 1 concept}+=[font=\sf, sibling angle=40,level distance = 35mm]
+\node[concept,scale=0.7] {Деньги}
+[clockwise from=135]
+child[concept color=beamer@nngublue, visible on=<2->]{ node[concept,scale=0.9]{Порта-тивность} } 
+child[concept color=beamer@nngublue, visible on=<3->]{ node[concept,scale=0.9]{Долго-вечность} } 
+child[concept color=beamer@nngublue, visible on=<4->]{ node[concept,scale=0.7]{Делимость} } 
+child[concept color=beamer@nngublue, visible on=<5->]{ node[concept,scale=0.7]{Постоянная полезность} }
+child[concept color=beamer@nngublue, visible on=<6->]{ node[concept,scale=0.9]{Общеиз-вестность и дос-тупность}} 
+child[concept color=beamer@nngublue, visible on=<7->]{ node[concept,scale=0.9]{Высокая рыночная стоимость} }
+child[concept color=beamer@nngublue, visible on=<8->]{ node[concept,scale=0.8]{Стандарти-зованность} }
+child[concept color=beamer@nngublue, visible on=<9->]{ node[concept,scale=0.7]{Узнава-емость} }
+child[concept color=beamer@nngublue, visible on=<10->]{ node[concept,scale=0.7]{Сложность подделки} };
+\end{tikzpicture}
+
+\end{standaloneframe}
+\end{document}

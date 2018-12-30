@@ -1,0 +1,237 @@
+DataType,DataVendor,Description
+App Usage,AdvanGeo-location,"Mobile phone traffic data. 1,600 tickers covered across several sectors. US and EU focused. Founded in 2015; 50 employees."
+App Usage,QuandlData Aggregator,"Quandl is a platform for data that delivers a suite of unique, non-market data products atop a strong base of core financial and economic data. Founded in 2012; 49 employees."
+App Usage,ThasosGeo-location,Geo-location data which can be used to measure consumer foot traffic. Founded in 2011; 21 employees.
+App Usage,SciDex AlphaData Aggregator,"Blockchain-based alternative data marketplace, currently populated with mostly demographic data. Founders are prioritizing getting more public and satellite data on the platform. Founded in 2018; 10 employees."
+App Usage,StatlasData Aggregator,"Public data aggregator covering 15 sectors, focused largely on geo-location and satellite data. Founded in 2018; 3 employees."
+App Usage,SafegraphGeo-location,"Geo-location data from over 50m mobile devices, tracked to 15m POI and 1000 brands. Has raised $16m in funding. Founded in 2016; 28 employees."
+App Usage,BMLL TechnologyData Broker,Research platform for combining alternative datasets with order book data. Founded in 2014; 42 employees.
+Credit/Debit Card,AdvanGeo-location,"Mobile phone traffic data. 1,600 tickers covered across several sectors. US and EU focused. Founded in 2015; 50 employees."
+Credit/Debit Card,QuandlData Aggregator,"Quandl is a platform for data that delivers a suite of unique, non-market data products atop a strong base of core financial and economic data. Founded in 2012; 49 employees."
+Credit/Debit Card,ThasosGeo-location,Geo-location data which can be used to measure consumer foot traffic. Founded in 2011; 21 employees.
+Credit/Debit Card,Consumer EdgeCredit/Debit Card,"Credit card transaction panel of over 15mm users from hundreds of US banks. Also has merchant scanner data, Amazon basket tracking with 100k opt-in panel, and survey data. Founded in 2009; 28 employees."
+Credit/Debit Card,SciDex AlphaData Aggregator,"Blockchain-based alternative data marketplace, currently populated with mostly demographic data. Founders are prioritizing getting more public and satellite data on the platform. Founded in 2018; 10 employees."
+Credit/Debit Card,StatlasData Aggregator,"Public data aggregator covering 15 sectors, focused largely on geo-location and satellite data. Founded in 2018; 3 employees."
+Credit/Debit Card,Second MeasureCredit/Debit Card,"Provides credit card transaction data and insights. Has raised $5.4M to date (Y Combinator, Jefferies). Founded in 2015; 35 employees (mostly engineers and data scientists; 40% PhDs)."
+Credit/Debit Card,SafegraphGeo-location,"Geo-location data from over 50m mobile devices, tracked to 15m POI and 1000 brands. Has raised $16m in funding. Founded in 2016; 28 employees."
+Credit/Debit Card,BMLL TechnologyData Broker,Research platform for combining alternative datasets with order book data. Founded in 2014; 42 employees.
+Data Aggregator,AdvanGeo-location,"Mobile phone traffic data. 1,600 tickers covered across several sectors. US and EU focused. Founded in 2015; 50 employees."
+Data Aggregator,ThasosGeo-location,Geo-location data which can be used to measure consumer foot traffic. Founded in 2011; 21 employees.
+Data Aggregator,Consumer EdgeCredit/Debit Card,"Credit card transaction panel of over 15mm users from hundreds of US banks. Also has merchant scanner data, Amazon basket tracking with 100k opt-in panel, and survey data. Founded in 2009; 28 employees."
+Data Aggregator,Second MeasureCredit/Debit Card,"Provides credit card transaction data and insights. Has raised $5.4M to date (Y Combinator, Jefferies). Founded in 2015; 35 employees (mostly engineers and data scientists; 40% PhDs)."
+Data Aggregator,SafegraphGeo-location,"Geo-location data from over 50m mobile devices, tracked to 15m POI and 1000 brands. Has raised $16m in funding. Founded in 2016; 28 employees."
+Data Aggregator,BMLL TechnologyData Broker,Research platform for combining alternative datasets with order book data. Founded in 2014; 42 employees.
+Data Broker,AdvanGeo-location,"Mobile phone traffic data. 1,600 tickers covered across several sectors. US and EU focused. Founded in 2015; 50 employees."
+Data Broker,ThasosGeo-location,Geo-location data which can be used to measure consumer foot traffic. Founded in 2011; 21 employees.
+Data Broker,Consumer EdgeCredit/Debit Card,"Credit card transaction panel of over 15mm users from hundreds of US banks. Also has merchant scanner data, Amazon basket tracking with 100k opt-in panel, and survey data. Founded in 2009; 28 employees."
+Data Broker,Second MeasureCredit/Debit Card,"Provides credit card transaction data and insights. Has raised $5.4M to date (Y Combinator, Jefferies). Founded in 2015; 35 employees (mostly engineers and data scientists; 40% PhDs)."
+Data Broker,SafegraphGeo-location,"Geo-location data from over 50m mobile devices, tracked to 15m POI and 1000 brands. Has raised $16m in funding. Founded in 2016; 28 employees."
+Geo-location,AdvanGeo-location,"Mobile phone traffic data. 1,600 tickers covered across several sectors. US and EU focused. Founded in 2015; 50 employees."
+Geo-location,7ParkOther,"Transformation services to tag, organize, normalize, and model raw, unstructured data, used to create Leading Performance Indicators for over 1,000 companies from credit card, receipt, healthcare, maritime oil, location, app, housing, clickstream and open web data. Founded in 2012; 45 employees."
+Geo-location,ThasosGeo-location,Geo-location data which can be used to measure consumer foot traffic. Founded in 2011; 21 employees.
+Geo-location,WoodseerOther,Dividend forecast data (dates and amounts) calculated 24 months in advance using a corporate actions database. Sell-side analysts review all forecasts.
+Geo-location,Consumer EdgeCredit/Debit Card,"Credit card transaction panel of over 15mm users from hundreds of US banks. Also has merchant scanner data, Amazon basket tracking with 100k opt-in panel, and survey data. Founded in 2009; 28 employees."
+Geo-location,BarchartOther,"Weather data and commodity bid data dating back to 2008, available in real-time and sourced from 3,500 locations. Founded in 2008; 49 employees."
+Geo-location,Second MeasureCredit/Debit Card,"Provides credit card transaction data and insights. Has raised $5.4M to date (Y Combinator, Jefferies). Founded in 2015; 35 employees (mostly engineers and data scientists; 40% PhDs)."
+Geo-location,SafegraphGeo-location,"Geo-location data from over 50m mobile devices, tracked to 15m POI and 1000 brands. Has raised $16m in funding. Founded in 2016; 28 employees."
+Geo-location,BMLL TechnologyData Broker,Research platform for combining alternative datasets with order book data. Founded in 2014; 42 employees.
+Geo-location,Anonymous ProviderOther,"Data on 20% of US household moves, available 4-8 weeks before the move event. Insight into retail (regional demographic shifts), insurance, cable/internet, and banking. Founded in 2016; 10 employees."
+Email/Consumer Receipts,AdvanGeo-location,"Mobile phone traffic data. 1,600 tickers covered across several sectors. US and EU focused. Founded in 2015; 50 employees."
+Email/Consumer Receipts,7ParkOther,"Transformation services to tag, organize, normalize, and model raw, unstructured data, used to create Leading Performance Indicators for over 1,000 companies from credit card, receipt, healthcare, maritime oil, location, app, housing, clickstream and open web data. Founded in 2012; 45 employees."
+Email/Consumer Receipts,ThasosGeo-location,Geo-location data which can be used to measure consumer foot traffic. Founded in 2011; 21 employees.
+Email/Consumer Receipts,WoodseerOther,Dividend forecast data (dates and amounts) calculated 24 months in advance using a corporate actions database. Sell-side analysts review all forecasts.
+Email/Consumer Receipts,Consumer EdgeCredit/Debit Card,"Credit card transaction panel of over 15mm users from hundreds of US banks. Also has merchant scanner data, Amazon basket tracking with 100k opt-in panel, and survey data. Founded in 2009; 28 employees."
+Email/Consumer Receipts,BarchartOther,"Weather data and commodity bid data dating back to 2008, available in real-time and sourced from 3,500 locations. Founded in 2008; 49 employees."
+Email/Consumer Receipts,Second MeasureCredit/Debit Card,"Provides credit card transaction data and insights. Has raised $5.4M to date (Y Combinator, Jefferies). Founded in 2015; 35 employees (mostly engineers and data scientists; 40% PhDs)."
+Email/Consumer Receipts,SafegraphGeo-location,"Geo-location data from over 50m mobile devices, tracked to 15m POI and 1000 brands. Has raised $16m in funding. Founded in 2016; 28 employees."
+Email/Consumer Receipts,BMLL TechnologyData Broker,Research platform for combining alternative datasets with order book data. Founded in 2014; 42 employees.
+Email/Consumer Receipts,Anonymous ProviderOther,"Data on 20% of US household moves, available 4-8 weeks before the move event. Insight into retail (regional demographic shifts), insurance, cable/internet, and banking. Founded in 2016; 10 employees."
+Primary Data Source,AdvanGeo-location,"Mobile phone traffic data. 1,600 tickers covered across several sectors. US and EU focused. Founded in 2015; 50 employees."
+Primary Data Source,7ParkOther,"Transformation services to tag, organize, normalize, and model raw, unstructured data, used to create Leading Performance Indicators for over 1,000 companies from credit card, receipt, healthcare, maritime oil, location, app, housing, clickstream and open web data. Founded in 2012; 45 employees."
+Primary Data Source,ThasosGeo-location,Geo-location data which can be used to measure consumer foot traffic. Founded in 2011; 21 employees.
+Primary Data Source,WoodseerOther,Dividend forecast data (dates and amounts) calculated 24 months in advance using a corporate actions database. Sell-side analysts review all forecasts.
+Primary Data Source,Consumer EdgeCredit/Debit Card,"Credit card transaction panel of over 15mm users from hundreds of US banks. Also has merchant scanner data, Amazon basket tracking with 100k opt-in panel, and survey data. Founded in 2009; 28 employees."
+Primary Data Source,BarchartOther,"Weather data and commodity bid data dating back to 2008, available in real-time and sourced from 3,500 locations. Founded in 2008; 49 employees."
+Primary Data Source,Second MeasureCredit/Debit Card,"Provides credit card transaction data and insights. Has raised $5.4M to date (Y Combinator, Jefferies). Founded in 2015; 35 employees (mostly engineers and data scientists; 40% PhDs)."
+Primary Data Source,SafegraphGeo-location,"Geo-location data from over 50m mobile devices, tracked to 15m POI and 1000 brands. Has raised $16m in funding. Founded in 2016; 28 employees."
+Primary Data Source,BMLL TechnologyData Broker,Research platform for combining alternative datasets with order book data. Founded in 2014; 42 employees.
+Primary Data Source,Anonymous ProviderOther,"Data on 20% of US household moves, available 4-8 weeks before the move event. Insight into retail (regional demographic shifts), insurance, cable/internet, and banking. Founded in 2016; 10 employees."
+Public Data,AdvanGeo-location,"Mobile phone traffic data. 1,600 tickers covered across several sectors. US and EU focused. Founded in 2015; 50 employees."
+Public Data,7ParkOther,"Transformation services to tag, organize, normalize, and model raw, unstructured data, used to create Leading Performance Indicators for over 1,000 companies from credit card, receipt, healthcare, maritime oil, location, app, housing, clickstream and open web data. Founded in 2012; 45 employees."
+Public Data,ThasosGeo-location,Geo-location data which can be used to measure consumer foot traffic. Founded in 2011; 21 employees.
+Public Data,WoodseerOther,Dividend forecast data (dates and amounts) calculated 24 months in advance using a corporate actions database. Sell-side analysts review all forecasts.
+Public Data,Consumer EdgeCredit/Debit Card,"Credit card transaction panel of over 15mm users from hundreds of US banks. Also has merchant scanner data, Amazon basket tracking with 100k opt-in panel, and survey data. Founded in 2009; 28 employees."
+Public Data,Audit AnalyticsPublic Data,"Provides audit, regulatory, and disclosure intelligence and data. They specialize in normalizing non-quantitative aspects of financial reporting that have a demonstrated impact on company performance. Founded in 2003; 70 employees."
+Public Data,BarchartOther,"Weather data and commodity bid data dating back to 2008, available in real-time and sourced from 3,500 locations. Founded in 2008; 49 employees."
+Public Data,YewnoPublic Data,"Data on quantity of intellectual property a company has across technologies with high growth expectations (e.g. blockchain, AI), as well as risk and market data. Founded in 2015; 20 employees."
+Public Data,CropProphetPublic Data,Weather-focused US Grains yield and production forecast system. Founded in 2009; 3 employees.
+Public Data,Second MeasureCredit/Debit Card,"Provides credit card transaction data and insights. Has raised $5.4M to date (Y Combinator, Jefferies). Founded in 2015; 35 employees (mostly engineers and data scientists; 40% PhDs)."
+Public Data,SafegraphGeo-location,"Geo-location data from over 50m mobile devices, tracked to 15m POI and 1000 brands. Has raised $16m in funding. Founded in 2016; 28 employees."
+Public Data,IPqweryPublic Data,"Collects corporate IP data (patent and trademark) from multiple public records offices across USA, Canada, and Europe. Founded in 2016; 5 employees."
+Public Data,BMLL TechnologyData Broker,Research platform for combining alternative datasets with order book data. Founded in 2014; 42 employees.
+Public Data,Anonymous ProviderOther,"Data on 20% of US household moves, available 4-8 weeks before the move event. Insight into retail (regional demographic shifts), insurance, cable/internet, and banking. Founded in 2016; 10 employees."
+Satellite,AdvanGeo-location,"Mobile phone traffic data. 1,600 tickers covered across several sectors. US and EU focused. Founded in 2015; 50 employees."
+Satellite,7ParkOther,"Transformation services to tag, organize, normalize, and model raw, unstructured data, used to create Leading Performance Indicators for over 1,000 companies from credit card, receipt, healthcare, maritime oil, location, app, housing, clickstream and open web data. Founded in 2012; 45 employees."
+Satellite,Orbital InsightSatellite,Satellite data with broad sector applications. Founded in 2013; 78 employees.
+Satellite,ThasosGeo-location,Geo-location data which can be used to measure consumer foot traffic. Founded in 2011; 21 employees.
+Satellite,WoodseerOther,Dividend forecast data (dates and amounts) calculated 24 months in advance using a corporate actions database. Sell-side analysts review all forecasts.
+Satellite,RS MetricsSatellite,"Satellite data focused on metals and commodities, real estate and industrial sector applications. Founded in 2010; 50 employees."
+Satellite,Consumer EdgeCredit/Debit Card,"Credit card transaction panel of over 15mm users from hundreds of US banks. Also has merchant scanner data, Amazon basket tracking with 100k opt-in panel, and survey data. Founded in 2009; 28 employees."
+Satellite,Audit AnalyticsPublic Data,"Provides audit, regulatory, and disclosure intelligence and data. They specialize in normalizing non-quantitative aspects of financial reporting that have a demonstrated impact on company performance. Founded in 2003; 70 employees."
+Satellite,BarchartOther,"Weather data and commodity bid data dating back to 2008, available in real-time and sourced from 3,500 locations. Founded in 2008; 49 employees."
+Satellite,Bird.iSatellite,Satellite data covering construction and agriculture. Founded in 2014; 13 employees.
+Satellite,Descartes LabsSatellite,Geospatial image processing – receive satellite imaging from public and commercial partners. Founded in 2014; 75 employees.
+Satellite,YewnoPublic Data,"Data on quantity of intellectual property a company has across technologies with high growth expectations (e.g. blockchain, AI), as well as risk and market data. Founded in 2015; 20 employees."
+Satellite,SpireSatellite,"Satellite data with broad sector applications, also provide weather data based on its satellite imaging. Founded in 2012; 116 employees."
+Satellite,CropProphetPublic Data,Weather-focused US Grains yield and production forecast system. Founded in 2009; 3 employees.
+Satellite,Second MeasureCredit/Debit Card,"Provides credit card transaction data and insights. Has raised $5.4M to date (Y Combinator, Jefferies). Founded in 2015; 35 employees (mostly engineers and data scientists; 40% PhDs)."
+Satellite,SafegraphGeo-location,"Geo-location data from over 50m mobile devices, tracked to 15m POI and 1000 brands. Has raised $16m in funding. Founded in 2016; 28 employees."
+Satellite,IPqweryPublic Data,"Collects corporate IP data (patent and trademark) from multiple public records offices across USA, Canada, and Europe. Founded in 2016; 5 employees."
+Satellite,BMLL TechnologyData Broker,Research platform for combining alternative datasets with order book data. Founded in 2014; 42 employees.
+Satellite,Anonymous ProviderOther,"Data on 20% of US household moves, available 4-8 weeks before the move event. Insight into retail (regional demographic shifts), insurance, cable/internet, and banking. Founded in 2016; 10 employees."
+Sell-side,AdvanGeo-location,"Mobile phone traffic data. 1,600 tickers covered across several sectors. US and EU focused. Founded in 2015; 50 employees."
+Sell-side,7ParkOther,"Transformation services to tag, organize, normalize, and model raw, unstructured data, used to create Leading Performance Indicators for over 1,000 companies from credit card, receipt, healthcare, maritime oil, location, app, housing, clickstream and open web data. Founded in 2012; 45 employees."
+Sell-side,Orbital InsightSatellite,Satellite data with broad sector applications. Founded in 2013; 78 employees.
+Sell-side,ThasosGeo-location,Geo-location data which can be used to measure consumer foot traffic. Founded in 2011; 21 employees.
+Sell-side,WoodseerOther,Dividend forecast data (dates and amounts) calculated 24 months in advance using a corporate actions database. Sell-side analysts review all forecasts.
+Sell-side,RS MetricsSatellite,"Satellite data focused on metals and commodities, real estate and industrial sector applications. Founded in 2010; 50 employees."
+Sell-side,Consumer EdgeCredit/Debit Card,"Credit card transaction panel of over 15mm users from hundreds of US banks. Also has merchant scanner data, Amazon basket tracking with 100k opt-in panel, and survey data. Founded in 2009; 28 employees."
+Sell-side,Audit AnalyticsPublic Data,"Provides audit, regulatory, and disclosure intelligence and data. They specialize in normalizing non-quantitative aspects of financial reporting that have a demonstrated impact on company performance. Founded in 2003; 70 employees."
+Sell-side,BarchartOther,"Weather data and commodity bid data dating back to 2008, available in real-time and sourced from 3,500 locations. Founded in 2008; 49 employees."
+Sell-side,Bird.iSatellite,Satellite data covering construction and agriculture. Founded in 2014; 13 employees.
+Sell-side,Descartes LabsSatellite,Geospatial image processing – receive satellite imaging from public and commercial partners. Founded in 2014; 75 employees.
+Sell-side,YewnoPublic Data,"Data on quantity of intellectual property a company has across technologies with high growth expectations (e.g. blockchain, AI), as well as risk and market data. Founded in 2015; 20 employees."
+Sell-side,SpireSatellite,"Satellite data with broad sector applications, also provide weather data based on its satellite imaging. Founded in 2012; 116 employees."
+Sell-side,CropProphetPublic Data,Weather-focused US Grains yield and production forecast system. Founded in 2009; 3 employees.
+Sell-side,Second MeasureCredit/Debit Card,"Provides credit card transaction data and insights. Has raised $5.4M to date (Y Combinator, Jefferies). Founded in 2015; 35 employees (mostly engineers and data scientists; 40% PhDs)."
+Sell-side,SafegraphGeo-location,"Geo-location data from over 50m mobile devices, tracked to 15m POI and 1000 brands. Has raised $16m in funding. Founded in 2016; 28 employees."
+Sell-side,IPqweryPublic Data,"Collects corporate IP data (patent and trademark) from multiple public records offices across USA, Canada, and Europe. Founded in 2016; 5 employees."
+Sell-side,BMLL TechnologyData Broker,Research platform for combining alternative datasets with order book data. Founded in 2014; 42 employees.
+Sell-side,Anonymous ProviderOther,"Data on 20% of US household moves, available 4-8 weeks before the move event. Insight into retail (regional demographic shifts), insurance, cable/internet, and banking. Founded in 2016; 10 employees."
+Social/Sentiment,AdvanGeo-location,"Mobile phone traffic data. 1,600 tickers covered across several sectors. US and EU focused. Founded in 2015; 50 employees."
+Social/Sentiment,7ParkOther,"Transformation services to tag, organize, normalize, and model raw, unstructured data, used to create Leading Performance Indicators for over 1,000 companies from credit card, receipt, healthcare, maritime oil, location, app, housing, clickstream and open web data. Founded in 2012; 45 employees."
+Social/Sentiment,Orbital InsightSatellite,Satellite data with broad sector applications. Founded in 2013; 78 employees.
+Social/Sentiment,ThasosGeo-location,Geo-location data which can be used to measure consumer foot traffic. Founded in 2011; 21 employees.
+Social/Sentiment,WoodseerOther,Dividend forecast data (dates and amounts) calculated 24 months in advance using a corporate actions database. Sell-side analysts review all forecasts.
+Social/Sentiment,RS MetricsSatellite,"Satellite data focused on metals and commodities, real estate and industrial sector applications. Founded in 2010; 50 employees."
+Social/Sentiment,Consumer EdgeCredit/Debit Card,"Credit card transaction panel of over 15mm users from hundreds of US banks. Also has merchant scanner data, Amazon basket tracking with 100k opt-in panel, and survey data. Founded in 2009; 28 employees."
+Social/Sentiment,Audit AnalyticsPublic Data,"Provides audit, regulatory, and disclosure intelligence and data. They specialize in normalizing non-quantitative aspects of financial reporting that have a demonstrated impact on company performance. Founded in 2003; 70 employees."
+Social/Sentiment,Amenity AnalyticsSocial/Sentiment,"Text analytics platform for analyzing unstructured data. Customizes reports for earning call transcripts, regulatory filings, broker research, news, and more. Founded in 2015; 40 employees."
+Social/Sentiment,BarchartOther,"Weather data and commodity bid data dating back to 2008, available in real-time and sourced from 3,500 locations. Founded in 2008; 49 employees."
+Social/Sentiment,Bird.iSatellite,Satellite data covering construction and agriculture. Founded in 2014; 13 employees.
+Social/Sentiment,Descartes LabsSatellite,Geospatial image processing – receive satellite imaging from public and commercial partners. Founded in 2014; 75 employees.
+Social/Sentiment,YewnoPublic Data,"Data on quantity of intellectual property a company has across technologies with high growth expectations (e.g. blockchain, AI), as well as risk and market data. Founded in 2015; 20 employees."
+Social/Sentiment,SpireSatellite,"Satellite data with broad sector applications, also provide weather data based on its satellite imaging. Founded in 2012; 116 employees."
+Social/Sentiment,CropProphetPublic Data,Weather-focused US Grains yield and production forecast system. Founded in 2009; 3 employees.
+Social/Sentiment,Second MeasureCredit/Debit Card,"Provides credit card transaction data and insights. Has raised $5.4M to date (Y Combinator, Jefferies). Founded in 2015; 35 employees (mostly engineers and data scientists; 40% PhDs)."
+Social/Sentiment,SafegraphGeo-location,"Geo-location data from over 50m mobile devices, tracked to 15m POI and 1000 brands. Has raised $16m in funding. Founded in 2016; 28 employees."
+Social/Sentiment,Prosper Insights & AnalyticsSocial/Sentiment,"Proprietary dataset of US and China consumer survey data. US – 15 years of data, tracks 7,500 monthly respondents for 1,290 brands/296 tickers. China – 8 years of data, tracks 5,000 respondents across 285 brands/126 tickers. Has exclusive distribution through Consumer Edge Research. Founded in 1991; 6 employees."
+Social/Sentiment,IPqweryPublic Data,"Collects corporate IP data (patent and trademark) from multiple public records offices across USA, Canada, and Europe. Founded in 2016; 5 employees."
+Social/Sentiment,BMLL TechnologyData Broker,Research platform for combining alternative datasets with order book data. Founded in 2014; 42 employees.
+Social/Sentiment,Brain CompanySocial/Sentiment,Sentiment data provider with insights on the ticker level. Using natural language processing of public media sources. Founded in 2016; 5 employees.
+Social/Sentiment,Anonymous ProviderOther,"Data on 20% of US household moves, available 4-8 weeks before the move event. Insight into retail (regional demographic shifts), insurance, cable/internet, and banking. Founded in 2016; 10 employees."
+Social/Sentiment,GDELTSocial/Sentiment,Free sentiment and news data dating back to 1979 and geo-referenced to create global sentiment network. Coverage of 100+ languages and daily granularity since 2013. Founded in 2011; 1 employees.
+Survey,AdvanGeo-location,"Mobile phone traffic data. 1,600 tickers covered across several sectors. US and EU focused. Founded in 2015; 50 employees."
+Survey,7ParkOther,"Transformation services to tag, organize, normalize, and model raw, unstructured data, used to create Leading Performance Indicators for over 1,000 companies from credit card, receipt, healthcare, maritime oil, location, app, housing, clickstream and open web data. Founded in 2012; 45 employees."
+Survey,Orbital InsightSatellite,Satellite data with broad sector applications. Founded in 2013; 78 employees.
+Survey,ThasosGeo-location,Geo-location data which can be used to measure consumer foot traffic. Founded in 2011; 21 employees.
+Survey,WoodseerOther,Dividend forecast data (dates and amounts) calculated 24 months in advance using a corporate actions database. Sell-side analysts review all forecasts.
+Survey,RS MetricsSatellite,"Satellite data focused on metals and commodities, real estate and industrial sector applications. Founded in 2010; 50 employees."
+Survey,Consumer EdgeCredit/Debit Card,"Credit card transaction panel of over 15mm users from hundreds of US banks. Also has merchant scanner data, Amazon basket tracking with 100k opt-in panel, and survey data. Founded in 2009; 28 employees."
+Survey,Audit AnalyticsPublic Data,"Provides audit, regulatory, and disclosure intelligence and data. They specialize in normalizing non-quantitative aspects of financial reporting that have a demonstrated impact on company performance. Founded in 2003; 70 employees."
+Survey,Amenity AnalyticsSocial/Sentiment,"Text analytics platform for analyzing unstructured data. Customizes reports for earning call transcripts, regulatory filings, broker research, news, and more. Founded in 2015; 40 employees."
+Survey,BarchartOther,"Weather data and commodity bid data dating back to 2008, available in real-time and sourced from 3,500 locations. Founded in 2008; 49 employees."
+Survey,Bird.iSatellite,Satellite data covering construction and agriculture. Founded in 2014; 13 employees.
+Survey,Descartes LabsSatellite,Geospatial image processing – receive satellite imaging from public and commercial partners. Founded in 2014; 75 employees.
+Survey,YewnoPublic Data,"Data on quantity of intellectual property a company has across technologies with high growth expectations (e.g. blockchain, AI), as well as risk and market data. Founded in 2015; 20 employees."
+Survey,SpireSatellite,"Satellite data with broad sector applications, also provide weather data based on its satellite imaging. Founded in 2012; 116 employees."
+Survey,CropProphetPublic Data,Weather-focused US Grains yield and production forecast system. Founded in 2009; 3 employees.
+Survey,Second MeasureCredit/Debit Card,"Provides credit card transaction data and insights. Has raised $5.4M to date (Y Combinator, Jefferies). Founded in 2015; 35 employees (mostly engineers and data scientists; 40% PhDs)."
+Survey,SafegraphGeo-location,"Geo-location data from over 50m mobile devices, tracked to 15m POI and 1000 brands. Has raised $16m in funding. Founded in 2016; 28 employees."
+Survey,Prosper Insights & AnalyticsSocial/Sentiment,"Proprietary dataset of US and China consumer survey data. US – 15 years of data, tracks 7,500 monthly respondents for 1,290 brands/296 tickers. China – 8 years of data, tracks 5,000 respondents across 285 brands/126 tickers. Has exclusive distribution through Consumer Edge Research. Founded in 1991; 6 employees."
+Survey,IPqweryPublic Data,"Collects corporate IP data (patent and trademark) from multiple public records offices across USA, Canada, and Europe. Founded in 2016; 5 employees."
+Survey,BMLL TechnologyData Broker,Research platform for combining alternative datasets with order book data. Founded in 2014; 42 employees.
+Survey,Brain CompanySocial/Sentiment,Sentiment data provider with insights on the ticker level. Using natural language processing of public media sources. Founded in 2016; 5 employees.
+Survey,Anonymous ProviderOther,"Data on 20% of US household moves, available 4-8 weeks before the move event. Insight into retail (regional demographic shifts), insurance, cable/internet, and banking. Founded in 2016; 10 employees."
+Survey,GDELTSocial/Sentiment,Free sentiment and news data dating back to 1979 and geo-referenced to create global sentiment network. Coverage of 100+ languages and daily granularity since 2013. Founded in 2011; 1 employees.
+Weather,AdvanGeo-location,"Mobile phone traffic data. 1,600 tickers covered across several sectors. US and EU focused. Founded in 2015; 50 employees."
+Weather,7ParkOther,"Transformation services to tag, organize, normalize, and model raw, unstructured data, used to create Leading Performance Indicators for over 1,000 companies from credit card, receipt, healthcare, maritime oil, location, app, housing, clickstream and open web data. Founded in 2012; 45 employees."
+Weather,Orbital InsightSatellite,Satellite data with broad sector applications. Founded in 2013; 78 employees.
+Weather,ThasosGeo-location,Geo-location data which can be used to measure consumer foot traffic. Founded in 2011; 21 employees.
+Weather,WoodseerOther,Dividend forecast data (dates and amounts) calculated 24 months in advance using a corporate actions database. Sell-side analysts review all forecasts.
+Weather,RS MetricsSatellite,"Satellite data focused on metals and commodities, real estate and industrial sector applications. Founded in 2010; 50 employees."
+Weather,Consumer EdgeCredit/Debit Card,"Credit card transaction panel of over 15mm users from hundreds of US banks. Also has merchant scanner data, Amazon basket tracking with 100k opt-in panel, and survey data. Founded in 2009; 28 employees."
+Weather,Audit AnalyticsPublic Data,"Provides audit, regulatory, and disclosure intelligence and data. They specialize in normalizing non-quantitative aspects of financial reporting that have a demonstrated impact on company performance. Founded in 2003; 70 employees."
+Weather,Amenity AnalyticsSocial/Sentiment,"Text analytics platform for analyzing unstructured data. Customizes reports for earning call transcripts, regulatory filings, broker research, news, and more. Founded in 2015; 40 employees."
+Weather,BarchartOther,"Weather data and commodity bid data dating back to 2008, available in real-time and sourced from 3,500 locations. Founded in 2008; 49 employees."
+Weather,Bird.iSatellite,Satellite data covering construction and agriculture. Founded in 2014; 13 employees.
+Weather,Descartes LabsSatellite,Geospatial image processing – receive satellite imaging from public and commercial partners. Founded in 2014; 75 employees.
+Weather,YewnoPublic Data,"Data on quantity of intellectual property a company has across technologies with high growth expectations (e.g. blockchain, AI), as well as risk and market data. Founded in 2015; 20 employees."
+Weather,SpireSatellite,"Satellite data with broad sector applications, also provide weather data based on its satellite imaging. Founded in 2012; 116 employees."
+Weather,CropProphetPublic Data,Weather-focused US Grains yield and production forecast system. Founded in 2009; 3 employees.
+Weather,Second MeasureCredit/Debit Card,"Provides credit card transaction data and insights. Has raised $5.4M to date (Y Combinator, Jefferies). Founded in 2015; 35 employees (mostly engineers and data scientists; 40% PhDs)."
+Weather,SafegraphGeo-location,"Geo-location data from over 50m mobile devices, tracked to 15m POI and 1000 brands. Has raised $16m in funding. Founded in 2016; 28 employees."
+Weather,Prosper Insights & AnalyticsSocial/Sentiment,"Proprietary dataset of US and China consumer survey data. US – 15 years of data, tracks 7,500 monthly respondents for 1,290 brands/296 tickers. China – 8 years of data, tracks 5,000 respondents across 285 brands/126 tickers. Has exclusive distribution through Consumer Edge Research. Founded in 1991; 6 employees."
+Weather,IPqweryPublic Data,"Collects corporate IP data (patent and trademark) from multiple public records offices across USA, Canada, and Europe. Founded in 2016; 5 employees."
+Weather,BMLL TechnologyData Broker,Research platform for combining alternative datasets with order book data. Founded in 2014; 42 employees.
+Weather,Brain CompanySocial/Sentiment,Sentiment data provider with insights on the ticker level. Using natural language processing of public media sources. Founded in 2016; 5 employees.
+Weather,Anonymous ProviderOther,"Data on 20% of US household moves, available 4-8 weeks before the move event. Insight into retail (regional demographic shifts), insurance, cable/internet, and banking. Founded in 2016; 10 employees."
+Weather,GDELTSocial/Sentiment,Free sentiment and news data dating back to 1979 and geo-referenced to create global sentiment network. Coverage of 100+ languages and daily granularity since 2013. Founded in 2011; 1 employees.
+Web Data,YipitDataWeb Data,"Specializes in informing investors of fundamental performance and when a company under or overperforms from consensus. Consistent accuracy within 2% of company reported metrics. Coverage 60 companies including: BABA, BKNG, EBAY, EXPE, GRUB, JD, KMX, MELI, ZG. Data history 2013; 90 employees; 130+ clients."
+Web Data,ThinknumWeb Data,"Indexes and aggregates web data onto a single platform. ~$1mm in funding raised, backed by 500 Startups. Founded in 2013; 12 employees."
+Web Data,AdvanGeo-location,"Mobile phone traffic data. 1,600 tickers covered across several sectors. US and EU focused. Founded in 2015; 50 employees."
+Web Data,7ParkOther,"Transformation services to tag, organize, normalize, and model raw, unstructured data, used to create Leading Performance Indicators for over 1,000 companies from credit card, receipt, healthcare, maritime oil, location, app, housing, clickstream and open web data. Founded in 2012; 45 employees."
+Web Data,Orbital InsightSatellite,Satellite data with broad sector applications. Founded in 2013; 78 employees.
+Web Data,ThasosGeo-location,Geo-location data which can be used to measure consumer foot traffic. Founded in 2011; 21 employees.
+Web Data,WoodseerOther,Dividend forecast data (dates and amounts) calculated 24 months in advance using a corporate actions database. Sell-side analysts review all forecasts.
+Web Data,RS MetricsSatellite,"Satellite data focused on metals and commodities, real estate and industrial sector applications. Founded in 2010; 50 employees."
+Web Data,LinkUpWeb Data,Global job listing provider with 150mm jobs tracked since 2007. Provides both raw data and insights. Founded in 1996; 45 employees.
+Web Data,TYR DataWeb Data,"Alternative data consultant covering sentiment, social media, facial recognition, and booking data. Founded in 2014; 1 employee."
+Web Data,Consumer EdgeCredit/Debit Card,"Credit card transaction panel of over 15mm users from hundreds of US banks. Also has merchant scanner data, Amazon basket tracking with 100k opt-in panel, and survey data. Founded in 2009; 28 employees."
+Web Data,Audit AnalyticsPublic Data,"Provides audit, regulatory, and disclosure intelligence and data. They specialize in normalizing non-quantitative aspects of financial reporting that have a demonstrated impact on company performance. Founded in 2003; 70 employees."
+Web Data,Amenity AnalyticsSocial/Sentiment,"Text analytics platform for analyzing unstructured data. Customizes reports for earning call transcripts, regulatory filings, broker research, news, and more. Founded in 2015; 40 employees."
+Web Data,BarchartOther,"Weather data and commodity bid data dating back to 2008, available in real-time and sourced from 3,500 locations. Founded in 2008; 49 employees."
+Web Data,Bird.iSatellite,Satellite data covering construction and agriculture. Founded in 2014; 13 employees.
+Web Data,Towergate InformaticsWeb Data,"Air carrier passenger load data and customer review data, compiled daily. Founded in 2011; 3 employees."
+Web Data,Descartes LabsSatellite,Geospatial image processing – receive satellite imaging from public and commercial partners. Founded in 2014; 75 employees.
+Web Data,T.H. CapitalWeb Data,China focused web data firm. Founded in 2011 by a former Bernstein analyst; 12 employees.
+Web Data,YewnoPublic Data,"Data on quantity of intellectual property a company has across technologies with high growth expectations (e.g. blockchain, AI), as well as risk and market data. Founded in 2015; 20 employees."
+Web Data,SpireSatellite,"Satellite data with broad sector applications, also provide weather data based on its satellite imaging. Founded in 2012; 116 employees."
+Web Data,CropProphetPublic Data,Weather-focused US Grains yield and production forecast system. Founded in 2009; 3 employees.
+Web Data,Second MeasureCredit/Debit Card,"Provides credit card transaction data and insights. Has raised $5.4M to date (Y Combinator, Jefferies). Founded in 2015; 35 employees (mostly engineers and data scientists; 40% PhDs)."
+Web Data,SafegraphGeo-location,"Geo-location data from over 50m mobile devices, tracked to 15m POI and 1000 brands. Has raised $16m in funding. Founded in 2016; 28 employees."
+Web Data,Prosper Insights & AnalyticsSocial/Sentiment,"Proprietary dataset of US and China consumer survey data. US – 15 years of data, tracks 7,500 monthly respondents for 1,290 brands/296 tickers. China – 8 years of data, tracks 5,000 respondents across 285 brands/126 tickers. Has exclusive distribution through Consumer Edge Research. Founded in 1991; 6 employees."
+Web Data,IPqweryPublic Data,"Collects corporate IP data (patent and trademark) from multiple public records offices across USA, Canada, and Europe. Founded in 2016; 5 employees."
+Web Data,BMLL TechnologyData Broker,Research platform for combining alternative datasets with order book data. Founded in 2014; 42 employees.
+Web Data,Brain CompanySocial/Sentiment,Sentiment data provider with insights on the ticker level. Using natural language processing of public media sources. Founded in 2016; 5 employees.
+Web Data,Anonymous ProviderOther,"Data on 20% of US household moves, available 4-8 weeks before the move event. Insight into retail (regional demographic shifts), insurance, cable/internet, and banking. Founded in 2016; 10 employees."
+Web Data,GDELTSocial/Sentiment,Free sentiment and news data dating back to 1979 and geo-referenced to create global sentiment network. Coverage of 100+ languages and daily granularity since 2013. Founded in 2011; 1 employees.
+Web Traffic,YipitDataWeb Data,"Specializes in informing investors of fundamental performance and when a company under or overperforms from consensus. Consistent accuracy within 2% of company reported metrics. Coverage 60 companies including: BABA, BKNG, EBAY, EXPE, GRUB, JD, KMX, MELI, ZG. Data history 2013; 90 employees; 130+ clients."
+Web Traffic,ThinknumWeb Data,"Indexes and aggregates web data onto a single platform. ~$1mm in funding raised, backed by 500 Startups. Founded in 2013; 12 employees."
+Web Traffic,AdvanGeo-location,"Mobile phone traffic data. 1,600 tickers covered across several sectors. US and EU focused. Founded in 2015; 50 employees."
+Web Traffic,7ParkOther,"Transformation services to tag, organize, normalize, and model raw, unstructured data, used to create Leading Performance Indicators for over 1,000 companies from credit card, receipt, healthcare, maritime oil, location, app, housing, clickstream and open web data. Founded in 2012; 45 employees."
+Web Traffic,Orbital InsightSatellite,Satellite data with broad sector applications. Founded in 2013; 78 employees.
+Web Traffic,ThasosGeo-location,Geo-location data which can be used to measure consumer foot traffic. Founded in 2011; 21 employees.
+Web Traffic,WoodseerOther,Dividend forecast data (dates and amounts) calculated 24 months in advance using a corporate actions database. Sell-side analysts review all forecasts.
+Web Traffic,RS MetricsSatellite,"Satellite data focused on metals and commodities, real estate and industrial sector applications. Founded in 2010; 50 employees."
+Web Traffic,LinkUpWeb Data,Global job listing provider with 150mm jobs tracked since 2007. Provides both raw data and insights. Founded in 1996; 45 employees.
+Web Traffic,TYR DataWeb Data,"Alternative data consultant covering sentiment, social media, facial recognition, and booking data. Founded in 2014; 1 employee."
+Web Traffic,Consumer EdgeCredit/Debit Card,"Credit card transaction panel of over 15mm users from hundreds of US banks. Also has merchant scanner data, Amazon basket tracking with 100k opt-in panel, and survey data. Founded in 2009; 28 employees."
+Web Traffic,Audit AnalyticsPublic Data,"Provides audit, regulatory, and disclosure intelligence and data. They specialize in normalizing non-quantitative aspects of financial reporting that have a demonstrated impact on company performance. Founded in 2003; 70 employees."
+Web Traffic,Amenity AnalyticsSocial/Sentiment,"Text analytics platform for analyzing unstructured data. Customizes reports for earning call transcripts, regulatory filings, broker research, news, and more. Founded in 2015; 40 employees."
+Web Traffic,BarchartOther,"Weather data and commodity bid data dating back to 2008, available in real-time and sourced from 3,500 locations. Founded in 2008; 49 employees."
+Web Traffic,Bird.iSatellite,Satellite data covering construction and agriculture. Founded in 2014; 13 employees.
+Web Traffic,Towergate InformaticsWeb Data,"Air carrier passenger load data and customer review data, compiled daily. Founded in 2011; 3 employees."
+Web Traffic,Descartes LabsSatellite,Geospatial image processing – receive satellite imaging from public and commercial partners. Founded in 2014; 75 employees.
+Web Traffic,T.H. CapitalWeb Data,China focused web data firm. Founded in 2011 by a former Bernstein analyst; 12 employees.
+Web Traffic,YewnoPublic Data,"Data on quantity of intellectual property a company has across technologies with high growth expectations (e.g. blockchain, AI), as well as risk and market data. Founded in 2015; 20 employees."
+Web Traffic,SpireSatellite,"Satellite data with broad sector applications, also provide weather data based on its satellite imaging. Founded in 2012; 116 employees."
+Web Traffic,CropProphetPublic Data,Weather-focused US Grains yield and production forecast system. Founded in 2009; 3 employees.
+Web Traffic,Second MeasureCredit/Debit Card,"Provides credit card transaction data and insights. Has raised $5.4M to date (Y Combinator, Jefferies). Founded in 2015; 35 employees (mostly engineers and data scientists; 40% PhDs)."
+Web Traffic,SafegraphGeo-location,"Geo-location data from over 50m mobile devices, tracked to 15m POI and 1000 brands. Has raised $16m in funding. Founded in 2016; 28 employees."
+Web Traffic,Prosper Insights & AnalyticsSocial/Sentiment,"Proprietary dataset of US and China consumer survey data. US – 15 years of data, tracks 7,500 monthly respondents for 1,290 brands/296 tickers. China – 8 years of data, tracks 5,000 respondents across 285 brands/126 tickers. Has exclusive distribution through Consumer Edge Research. Founded in 1991; 6 employees."
+Web Traffic,IPqweryPublic Data,"Collects corporate IP data (patent and trademark) from multiple public records offices across USA, Canada, and Europe. Founded in 2016; 5 employees."
+Web Traffic,BMLL TechnologyData Broker,Research platform for combining alternative datasets with order book data. Founded in 2014; 42 employees.
+Web Traffic,Brain CompanySocial/Sentiment,Sentiment data provider with insights on the ticker level. Using natural language processing of public media sources. Founded in 2016; 5 employees.
+Web Traffic,Anonymous ProviderOther,"Data on 20% of US household moves, available 4-8 weeks before the move event. Insight into retail (regional demographic shifts), insurance, cable/internet, and banking. Founded in 2016; 10 employees."
+Web Traffic,GDELTSocial/Sentiment,Free sentiment and news data dating back to 1979 and geo-referenced to create global sentiment network. Coverage of 100+ languages and daily granularity since 2013. Founded in 2011; 1 employees.

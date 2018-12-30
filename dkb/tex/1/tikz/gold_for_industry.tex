@@ -1,0 +1,42 @@
+% !TeX program = lualatex -synctex=1 -interaction=nonstopmode --shell-escape %.tex
+\documentclass[beamer,xcolor=dvipsnames]{standalone}
+\RequirePackage[rus]{borochkin_tikz}
+
+\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+
+\begin{document}
+\begin{standaloneframe}[shrink=0, fragile]
+		\begin{tikzpicture}
+%define vars
+\tikzmath{\a1=1.95; \a2=.58;
+	\h1 = -1.5; \k1 =.25; 
+	\h2 = -3; \k2 =.25; 
+	\dd=.2;
+} 
+
+% coordinates
+\draw[thick,<->] (0,3.5) node[anchor= east] {$P_G$} -- (0,0) -- (3.5,0) 
+node[anchor=north] {$G_N$};
+% G_N
+\draw[domain=1.75:-(\h2-\h2/10),smooth,variable=\x,black] 
+plot ({\x},{(39*(\x - 3)^2)/20 + 1/4})  
+node[anchor=  west, black]{$G_N^d$};
+
+\tikzmath{\gm1=0.5527; \gn1=2.0527; \mn1=2.6053; \p1=2; 
+	\gm0=0.8798; \gn0=2.3798; \mn0=3.2597; \p0=1;
+} 
+
+\draw[dashed](\mn1,\p1)--(0,\p1) node[anchor=  east, black]{$P_G^1$};
+\draw[dashed](\mn0,\p0)--(0,\p0) node[anchor=  east, black]{$P_G^0$};
+
+% G_N
+\draw[dashed](\gn1,\p1)--(\gn1,0) node[anchor= north, black]{$G_N^1$};
+\node[dot] at (\gn1,\p1) {};
+
+\draw[dashed](\gn0,\p0)--(\gn0,0) node[below=.5, black]{$G_N^0$};
+\node[dot] at (\gn0,\p0) {};
+\end{tikzpicture}
+
+\end{standaloneframe}
+\end{document}

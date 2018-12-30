@@ -1,0 +1,52 @@
+% !TeX program = lualatex -synctex=1 -interaction=nonstopmode --shell-escape %.tex
+\documentclass[beamer,xcolor=dvipsnames]{standalone}
+\geometry{papersize={8cm,5cm}}
+\setbeamersize{text margin left=5mm,text margin right=5mm, sidebar width left=0mm} 
+\usepackage{borochkin_unicode_symbols}
+\RequirePackage[rus]{borochkin_tikz}
+
+\begin{document}
+\begin{standaloneframe}[shrink=0, fragile]
+\centering
+\begin{tikzpicture}
+\tikzstyle{line} = [ draw, -latex']
+\tikzstyle{block} = [draw, fill=white, rectangle, 
+minimum height=1.5em, minimum width=6em, 
+text width=3.5cm,align=center, 
+text height=4ex, text depth=3ex,]
+\node (lessee) at (0,0) [block] {Лизингополучатель};	  
+\node (insurance) at (5,0) [block] {Страховая компания};
+\node (producer) at (0,2.5) [block] {Продавец};
+\node (lessor) at (5,2.5) [block] {Лизингодатель};
+\node (bank) at (5,5) [block] {Банк};
+
+\onslide<2->{
+	\draw[thick, ->] (lessee) to node[auto,swap] {1} 
+	(producer);
+}
+\onslide<3->{
+	\draw[thick, ->] (lessee) to [bend left=15] node[auto,swap] {2} (lessor);
+}
+\onslide<4->{
+	\draw[thick, ->] (bank) to node[right,swap] {3} (lessor);
+}
+\onslide<5->{
+	\draw[thick, <->] (producer) to node[above,swap] {4} (lessor);
+	\path [thick, line,rounded corners] (lessor) -| ($(lessor.east) + (0.5,0.5)$) |-  node[xshift=.4cm, yshift=-.5cm] {4}(bank);
+}
+\onslide<6->{
+	\draw[dashed, thick, ->] (lessor) to node[right,swap] {5} (insurance);
+}
+\onslide<7->{
+	\draw[dashed, thick, ->] (lessor) to [bend left=15] node[auto,swap] {6} (lessee);
+}
+\onslide<8->{
+	\path [thick, line,rounded corners] (lessee.west) 
+	-| ($(lessee.west) + (-.5,0.5)$) 
+	-- ($(producer.north west) + (-.5,0.5)$) 
+	node[xshift=2cm, yshift=.3cm] {7}
+	-| ($(lessor.north) + (-1,0)$);
+}
+\end{tikzpicture}
+\end{standaloneframe}
+\end{document}

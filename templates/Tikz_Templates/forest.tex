@@ -1,0 +1,104 @@
+% !TeX program = lualatex -synctex=1 -interaction=nonstopmode --shell-escape %.tex
+\documentclass[beamer]{standalone}
+\RequirePackage[rus]{borochkin_tikz}
+
+\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+
+\begin{document}
+\begin{standaloneframe}[shrink=23, fragile]
+\begin{forest}
+	basic/.style = {draw, thin, drop shadow, font=\sffamily},
+	my root/.style = {basic, rounded corners=2pt, align=C{20mm}, fill=green!30},
+	upper style/.style = {basic, rounded corners=6pt, align=C{8em}, fill=green!60},
+	lower style/.style = {basic, align=L{6.5em}, fill=pink!60},
+  for tree={%
+    edge={->},
+    /tikz/>=LaTeX,
+  },
+  where level=0{%
+    my root,
+    for 1={%
+      for tree={%
+        if={level()<3}{%
+          upper style,
+        }{%
+          lower style,
+        },
+        if={level()<2}{%
+          if={isodd(n_children())}{%
+            calign=child edge,
+            calign primary child/.wrap pgfmath arg={#1}{int((n_children()+1)/2)},
+          }{%
+            calign=edge midpoint,
+          },
+        }{%
+          folder,
+          grow'=0,
+        },
+      },
+    },
+    for -1={%
+      for tree={%
+        if={level()<4}{%
+          upper style,
+        }{%
+          lower style,
+        },
+        if={level()<3}{%
+          if={isodd(n_children())}{%
+            calign=child edge,
+            calign primary child/.wrap pgfmath arg={#1}{int((n_children()+1)/2)},
+          }{%
+            calign=edge midpoint,
+          }
+        }{%
+          folder,
+          grow'=0,
+        },
+      },
+    },
+  }{},
+  [Possible Solutions
+    [Extending CMOS
+      [Non-Traditional CMOS
+        [FD-SOI]
+        [FinFET]
+        [GAA]
+        [Tri-gate]
+        [CNT-FET]
+        [Graphene-FET]
+      ]
+      [Dopant \& Material Engineering
+        [SiGi]
+        [III-V]
+      ]
+      [Novel Lithography Techniques
+        [EUV]
+        [Multi-patterning]
+        [Nanoimprint (NIL)]
+        [DSA]
+        [ML]
+      ]
+    ]
+    [Beyond CMOS
+      [Charge-Based
+        [Steep SS Devices
+          [TFET]
+          [IMOS]
+          [NEMS]
+          [Neg-Cg]
+        ]
+        [Unconventional Mechanisms
+          [RTD]
+          [SET]
+          [Mott FET]
+          [QCA]
+          [Atomic Switch]
+        ]
+      ]
+    ]
+  ]
+\end{forest}
+\end{standaloneframe}
+\end{document}

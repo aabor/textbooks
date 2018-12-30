@@ -1,0 +1,135 @@
+\ProvidesPackage{borochkin_exam_eng}
+
+\usepackage[ampersand]{easylist}
+%\ListProperties(Numbers1=a, Numbers2=l,Numbers3=r)
+
+\newcounter{solcount}
+\setcounter{solcount}{1}
+\newcommand\CC{%
+    \CorrectChoice\label{sol:\arabic{solcount}}
+    \stepcounter{solcount}
+}
+
+\renewcommand{\questionshook}{%
+    \settowidth{\leftmargin}{W.\hskip\labelsep\hskip 0em}
+}
+\renewcommand{\choiceshook}{%
+    \settowidth{\leftmargin}{W.\hskip\labelsep\hskip 0em}
+}
+\setlength{\columnsep}{1cm} 	
+
+
+\newcommand{\examdate}{\the\year}
+\pagestyle{headandfoot}
+
+\newcommand{\professor}{
+    \printanswers
+    \usetag{professor}
+}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyheadoffset{0in}
+\fancyhead[RO, LE]{page \thepage\ from \numpages}
+\fancyhead[RE]{\sf\rightmark}
+\fancyhead[LO]{\sf\leftmark}
+
+\fancyfoot[LO, RE]{\textcopyright  A.A. Borochkin, \the\year}
+\renewcommand{\headrulewidth}{2pt}
+\renewcommand{\footrulewidth}{1pt}
+
+
+\newcommand{\studentpersonalinfo}[3]{
+\begin{tabularx}{\textwidth}{>{\Large\bfseries}X>{\Large\bfseries}X}
+	Control \##1     & Surname: \hrulefill   \\[1em]
+	Variant \##2     & Name: \hrulefill      \\[1em]
+	Subject: #3      & Patronymic:\hrulefill \\[1em]
+	Date: \hrulefill & Group \#\hrulefill    \\[1em]
+\end{tabularx} 
+}
+\newcommand{\answerstotest}{
+\iftagged{professor}
+{
+	{\rowcolors{1}{gray!80}{white}
+		\begin{table}[htbp]
+			\centering
+			\Large
+			\begin{tabular}{|r|r|r|r|r|r|r|r|r|r|}
+				\hline
+				1     & 2     & 3     & 4     & 5     & 6     & 7     & 8     & 9     & 10 \\
+				\ref{sol:1}  & \ref{sol:2}  & \ref{sol:3}  & \ref{sol:4}  & \ref{sol:5}  & \ref{sol:6}  & \ref{sol:7}  & \ref{sol:8}  & \ref{sol:9}  & \ref{sol:10}  \\
+				11    & 12    & 13    & 14    & 15    & 16    & 17    & 18    & 19    & 20 \\
+				\ref{sol:11}  & \ref{sol:12}  & \ref{sol:13}  & \ref{sol:14}  & \ref{sol:15}  & \ref{sol:16}  & \ref{sol:17}  & \ref{sol:18}  & \ref{sol:19}  & \ref{sol:20}  \\
+				21    & 22    & 23    & 24    & 25    & 26    & 27    & 28    & 29    & 30 \\
+				\ref{sol:21}  & \ref{sol:22}  & \ref{sol:23}  & \ref{sol:24}  & \ref{sol:25}  & \ref{sol:26}  & \ref{sol:27}  & \ref{sol:28}  & \ref{sol:29}  & \ref{sol:30}  \\
+				31    & 32    & 33    & 34    & 35    & 36    & 37    & 38    & 39    & 40 \\
+				\ref{sol:31}  & \ref{sol:32}  & \ref{sol:33}  & \ref{sol:34}  & \ref{sol:35}  & \ref{sol:36}  & \ref{sol:37}  & \ref{sol:38}  & \ref{sol:39}  & \ref{sol:40}  \\
+				\hline
+			\end{tabular}%
+			\label{tab:addlabel}%
+		\end{table}%
+	}
+}
+{
+	{\rowcolors{1}{gray!80}{white}
+		\begin{table}[htbp]
+			\centering
+			\Large
+			\begin{tabular}{|r|r|r|r|r|r|r|r|r|r|}
+				\hline
+				1     & 2     & 3     & 4     & 5     & 6     & 7     & 8     & 9     & 10 \\
+				&      &       &       &       &       &       &       &       &  \\
+				11    & 12    & 13    & 14    & 15    & 16    & 17    & 18    & 19    & 20 \\
+				&       &       &       &       &       &       &       &       &  \\
+				21    & 22    & 23    & 24    & 25    & 26    & 27    & 28    & 29    & 30 \\
+				&       &       &       &       &       &       &       &       &  \\
+				31    & 32    & 33    & 34    & 35    & 36    & 37    & 38    & 39    & 40 \\
+				&       &       &       &       &       &       &       &       &  \\\hline
+			\end{tabular}%
+			\label{tab:addlabel}%
+		\end{table}%
+	}
+}
+}
+
+\newcommand{\answerstotestShort}{
+\iftagged{professor}
+{
+	{\rowcolors{1}{gray!80}{white}
+		\begin{table}[htbp]
+			\centering
+			\Large
+			\begin{tabular}{|r|r|r|r|r|r|r|r|r|r|}
+				\hline
+				1     & 2     & 3     & 4     & 5     & 6     & 7     & 8     & 9     & 10 \\
+				\ref{sol:1}  & \ref{sol:2}  & \ref{sol:3}  & \ref{sol:4}  & \ref{sol:5}  & \ref{sol:6}  & \ref{sol:7}  & \ref{sol:8}  & \ref{sol:9}  & \ref{sol:10}  \\
+				11    & 12    & 13    & 14    & 15    & 16    & 17    & 18    & 19    & 20 \\
+				\ref{sol:11}  & \ref{sol:12}  & \ref{sol:13}  & \ref{sol:14}  & \ref{sol:15}  & \ref{sol:16}  & \ref{sol:17}  & \ref{sol:18}  & \ref{sol:19}  & \ref{sol:20}  \\
+				\hline
+			\end{tabular}%
+			\label{tab:addlabel}%
+		\end{table}%
+	}
+}
+{
+	{\rowcolors{1}{gray!80}{white}
+		\begin{table}[htbp]
+			\centering
+			\Large
+			\begin{tabular}{|r|r|r|r|r|r|r|r|r|r|}
+				\hline
+				1     & 2     & 3     & 4     & 5     & 6     & 7     & 8     & 9     & 10 \\
+				&      &       &       &       &       &       &       &       &  \\
+				11    & 12    & 13    & 14    & 15    & 16    & 17    & 18    & 19    & 20 \\
+				&       &       &       &       &       &       &       &       &  \\
+				\hline
+			\end{tabular}%
+			\label{tab:addlabel}%
+		\end{table}%
+	}
+}
+}
+
+
+

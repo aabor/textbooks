@@ -1,0 +1,93 @@
+% !TeX program = lualatex -synctex=1 -interaction=nonstopmode --shell-escape %.tex
+\documentclass[beamer,xcolor=dvipsnames]{standalone}
+\usepackage{borochkin_unicode_symbols}
+\RequirePackage[rus]{borochkin_tikz}
+
+\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+
+\begin{document}
+\begin{standaloneframe}[shrink=0, fragile]
+	\begin{tikzpicture}
+\tikzstyle{line} = [ draw, -latex']
+\tikzstyle{block} = [draw, fill=white, rectangle, 
+minimum height=1.5em, text width=1.8cm,align=center, text height=2ex, text depth=3ex,]
+
+\coordinate (yd)   at (0,.5);
+\coordinate (xd)   at (0.5,0);
+\small
+\node (borrower) at (0,0) [block] {Заемщики};
+\footnotesize
+\node (ragency) at (2.5,0) [block] {Рейтинговое агентство};
+\small
+\node (issuer) at (5,0) [block] {Эмитенты};
+\scriptsize
+\node (underwriter) at (7.5,0) [block] {Андеррайтеры};
+\small
+\node (creditor) at (0,-2) [block] {Банк-кредитор};
+\footnotesize
+\node (organiser) at (2.5,-2) [block] {Организатор};
+\small
+\node (spv) at (5,-2) [block] {Траст (SPV)};
+\node (investor) at (7.5,-2) [block] {Инвесторы};
+\node (insurance) at (0,-4) [block] {Страховая компания};
+\node (realtor) at (2.5,-4) [block] {Риэлторы};
+\node (guarant) at (5,-4) [block] {Банк-гарант};
+
+\tiny
+\onslide<2->{
+	\draw[thick, rounded corners, <->] (creditor) -- 
+	node[left,yshift=0cm]{1}
+	(borrower);
+}
+
+\onslide<3->{
+	\draw[thick, rounded corners, ->] (ragency) to node[left,swap] {2} (organiser);
+	
+	\draw[thick, rounded corners, ->] (insurance)[bend left=15] to node[left,xshift=-.4cm,yshift=-.4cm] {2} (organiser);
+	
+	\draw[thick, rounded corners, ->] (realtor) to node[left,swap] {2} (organiser);
+	
+	\draw[thick, rounded corners, ->] (guarant) [bend right=15] to node[left, xshift=.7cm,yshift=-.4cm] {2} (organiser);
+}
+\onslide<4->{
+	\draw[thick, rounded corners, ->] ($(creditor.south)+(xd)$) -- ($(creditor.south) + (xd)-(yd)$)
+	-| node[below,xshift=-.75cm]{активы (3)}
+	($(organiser.south) - (xd)$);
+	\draw[thick, rounded corners, ->] ($(organiser.south)+(xd)$) -- ($(organiser.south) + (xd)-(yd)$)
+	-| node[below,xshift=-.75cm]{активы (3)}
+	($(spv.south) - (xd)$);
+}
+
+\onslide<5->{
+	\draw[thick, rounded corners, ->] (underwriter) to node[right,swap] {ценные бумаги (4)} (investor);
+	\draw[thick, rounded corners, ->] (issuer) to node[left,yshift=.2cm] {залог (4)} (spv);
+	\draw[thick, rounded corners, ->] (issuer)  to node[above,swap] {4} (underwriter);
+}
+
+\onslide<6->{
+	\draw[thick, rounded corners, <-] ($(creditor.north)+(xd)$) -- ($(creditor.north) + (xd)+(yd)$)
+	-| node[below,xshift=-.75cm]{деньги (5)}
+	($(organiser.north) - (xd)$);
+	\draw[thick, rounded corners, <-] ($(organiser.north)+(xd)$) -- ($(organiser.north) + (xd)+(yd)$)
+	-| node[below,xshift=-.75cm]{деньги (5)}
+	($(spv.north) - (xd)$);
+	\draw[thick, rounded corners, <-] ($(spv.north)+(xd)$) -- ($(spv.north) + (xd)+(yd)$)
+	-| node[below,xshift=-.75cm]{деньги (5)}
+	($(investor.north) - (xd)$);
+}
+
+\onslide<7->{
+	\draw[thick, rounded corners,red,dashed, ->] (borrower.west) --
+	($(borrower.west) - (xd)$)
+	|- 
+	node[right,yshift=1cm]{6}
+	(creditor.west);
+	\draw[thick, rounded corners,red,dashed, ->] (creditor)  to node[above,swap] {6} (organiser);
+	\draw[thick, rounded corners,red,dashed, ->] (organiser)  to node[above,swap] {6} (spv);
+	\draw[thick, rounded corners,red,dashed, ->] (spv)  to node[above,swap] {6} (investor);
+}
+\normalsize
+\end{tikzpicture}
+\end{standaloneframe}
+\end{document}

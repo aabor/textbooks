@@ -1,0 +1,62 @@
+% !TeX program = lualatex -synctex=1 -interaction=nonstopmode --shell-escape %.tex
+\documentclass[beamer,xcolor=dvipsnames]{standalone}
+\RequirePackage[rus]{borochkin_tikz}
+
+\tikzstyle{line} = [ draw, -latex']
+
+\tikzstyle{block} = [draw, rectangle, 
+	text width=3.5cm,align=center,
+	text height=4ex, text depth=5ex	
+]
+
+\begin{document}
+\begin{standaloneframe}[shrink=23, fragile]
+\begin{tikzpicture}[auto, node distance=5cm]
+\node (committee) [block] {Инвестиционный\\ комитет};	  
+\node (manager) [block, right of=committee] {Управляющая\\ компания};
+\node (council) [block, right of=manager] {Консультативный\\ совет};
+
+\node (investors) [block,text height=5ex, text depth=4ex, below=2cm of committee]{Инвесторы};
+\node (fund) [block, below=2cm of manager] {Венчурный\\ фонд};
+\node (companies) [block, below=2cm of council]{Венчурные\\ компании};
+
+
+\pause
+\draw[thick, ->] (investors)to [bend left=20] node[swap] {1} (manager);
+\pause
+\draw[thick, ->] (investors)to [bend right=55] node[swap] {2} (fund);
+\pause
+\draw[thick, ->] (investors)to node[swap] {3} (committee);
+\pause
+\draw[thick, ->] (committee) to node[swap] {4} (manager);
+\draw[thick, ->] (council) to node[swap] {4} (manager);
+\draw[thick, ->] (manager) to node[swap] {4} (fund);
+\pause
+\draw[thick, ->] (fund)to [bend right=55] node[swap] {5} (companies);
+\pause
+\draw[thick, ->] (manager)to [bend left=20] node[swap] {6} (investors);
+\draw[thick, ->] (manager)to [bend left=20] node[swap] {6} (companies);
+\pause
+\draw[thick, ->] (companies)to [bend left=30] node[swap]{7} (fund);
+\pause
+\draw[thick, ->] (fund) to [bend left=30] node[swap]{8} (investors);
+\end{tikzpicture}
+%\small
+\only<2>{1) инвесторы заключают договор о доверительном управлении имуществом с управляющей компанией;}
+
+\only<3>{2) инвесторы вносят денежные средства в венчурный фонд, получая в обмен паи фонда;}
+
+\only<4>{3) инвесторы входят в состав инвестиционного комитета, дающего окончательное одобрение сделок;}
+
+\only<5>{4) выбор компаний для инвестиций, с учетом мнения инвестиционного комитета и внешних экспертов;}
+
+\only<6>{5) средства венчурного фонда вкладываются в капитал венчурных компаний;}
+
+\only<7>{6) нефинансовую помощь в развитии бизнеса венчурных компаний, отчеты о результатах управления для инвесторов;}
+
+\only<8>{7) доходы от продажи долей участия в венчурных компаниях поступают в венчурный фонд;}
+
+\only<9>{8) возврат средств инвесторам, за вычетом комиссионых за управление и вознаграждения управляющего за успех.}
+\normalsize
+\end{standaloneframe}
+\end{document}

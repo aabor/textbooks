@@ -1,0 +1,51 @@
+% !TeX program = lualatex -synctex=1 -interaction=nonstopmode --shell-escape %.tex
+
+\documentclass{beamer}
+%\usepackage{import}
+\RequirePackage{subfiles}
+
+\RequirePackage[rus]{borochkin_beamer}
+%\usepackage{amsmath}
+
+\AfterPreamble{\hypersetup{
+	pdftitle={Финансовые риски в кредитной сфере},
+}}
+
+
+\title[Математическое обеспечение финансовых решений]{Математическое обеспечение финансовых решений\\Курс лекций}
+\author{к.э.н. Александр Александрович Борочкин}
+\institute{Нижегородский государственный университет}
+\subject{Финансы и кредит}
+\keywords{Финансовый риск, Value at risk, Expected Shortfall, опционы, touch options}
+\logo{\includelogonngurus}%\logo{ННГУ}
+\date{\the\year}
+
+
+\begin{document}
+
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+%\include{Literatura}
+\subfile{Literatura}
+
+\section{Управление рисками}
+\subfile{riskintro}
+
+\section{Модель Value at Risk (VaR)}
+%\include{var}
+\subfile{var}
+
+\section{Опционы}
+\subfile{options_rus}
+
+% final frame
+\begin{frame}
+\begin{center}
+\huge{Конец}
+\end{center}
+\end{frame}
+
+\end{document}

@@ -1,0 +1,59 @@
+% !TeX program = lualatex -synctex=1 -interaction=nonstopmode --shell-escape %.tex
+\RequirePackage{luatex85,shellesc}
+
+\documentclass[beamer,xcolor=dvipsnames]{standalone}
+\RequirePackage[rus]{borochkin_tikz}
+\RequirePackage{optionsStyles}
+
+\begin{document}
+
+\begin{standaloneframe}[shrink=25, fragile]
+\begin{tikzpicture}[optionpricetree]
+\scriptsize
+\optiontreetimecaption
+% draw binary tree model
+\matrix (z0) [optiontreenode] at (2.2,5.3)
+{
+	|[fill=gray!20]|42,9913~₽
+	&|[highlight, text on=<4->]| $z_3=0,2803~₽$\\
+	|[highlight, text on=<4->]|$x_3=\text{\$}0,294$ 
+	&|[highlight, text on=<4->]| $y_3=-12,3741~₽$ \\
+};
+\matrix (z11) [optiontreenode, above right= of z0] 
+{
+	&|[highlight, text on=<2->]|$\alpha=0,7658~₽$\\
+	|[fill=gray!20]|45,7658~₽ 
+	& |[highlight, text on=<2->]|$z_1=1,0257~₽$\\
+	|[highlight, text on=<2->]| $x_1=\text{\$}0,999$ 
+	&|[highlight, text on=<2->]| $y_1=-44,7020~₽$ \\
+};
+\matrix (z12) [optiontreenode, below right= of z0] 
+{
+	&|[highlight, text on=<3->]|$\alpha=0,0000~₽$\\
+	|[fill=gray!20]|42,3954~₽
+	&|[highlight, text on=<3->]|$z_2=0,0328~₽$\\
+	|[highlight, text on=<3->]|$x_2=\text{\$}0,039$ 
+	&|[highlight, text on=<3->]|$y_2=-1,6416~₽$ \\
+};
+\matrix (z21) [optiontreenode ,above right= of z11] 
+{
+	60,2065~₽
+	&|[highlight, text on=<5->]|$z_r=15,2065~₽$ \\
+	|[fill=gray!20]|48,7193~₽
+	&$z=3,7193~₽$\\
+};
+\matrix (z22) [optiontreenode, above right= of z12] 
+{
+	|[fill=gray!20]|45,1314~₽
+	&$z=0,1314~₽$\\
+};
+\matrix (z23) [optiontreenode, below right= of z12] 
+{
+	|[fill=gray!20]|41,8077~₽
+	&$z=0,0000~₽$\\
+};
+% draw connection arrows
+\drawconnectionarrowspricetree
+\end{tikzpicture}
+\end{standaloneframe}
+\end{document}

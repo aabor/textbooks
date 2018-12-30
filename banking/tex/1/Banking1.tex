@@ -1,0 +1,49 @@
+% !TeX program = lualatex -synctex=1 -interaction=nonstopmode %.tex
+
+\documentclass[12pt]{beamer}
+\RequirePackage[rus]{borochkin_beamer}
+
+\AfterPreamble{\hypersetup{
+	pdftitle={Банковское дело},
+}}
+
+\title[Банковское дело]{Банковское дело\\Курс лекций\\Часть 1}
+\author{к.э.н. Александр Александрович Борочкин}
+\institute{Нижегородский государственный университет}
+\subject{Финансы и кредит}
+\keywords{Банковское дело, ликвидность, платежеспособность, банковские операции, вексель, аккредитив, платежное поручение, банковский счет, платежные карты, процентные ставки, кредитная политика, оценка кредитоспособности, кредитный рейтинг, банковские гарантии, драгоценные металлы, факторинг, форфейтинг, лизинг, доверительное управление}
+\logo{\includelogonngurus}%\logo{ННГУ}
+\date{\the\year}
+
+\begin{document}
+
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+
+\section*{Литература}
+\subfile{literatura}
+
+\setnextsection{1}
+\section{Введение}
+\subfile{banks_intro}
+
+\section{Создание банка}
+\subfile{bank_creation}
+
+\section{Ликвидность банка}
+\subfile{bank_liquidity}
+
+\section{Финансовые кризисы}
+\subfile{financial_crisis_and_reforms}
+
+% final frame
+\begin{frame}
+\begin{center}
+\huge{Конец}
+\end{center}
+\end{frame}
+
+\end{document}

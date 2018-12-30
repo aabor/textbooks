@@ -1,0 +1,18 @@
+\ProvidesPackage{borochkin_multilanguage_fonts}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% fonts
+\usepackage{fontspec}
+\ExplSyntaxOn
+\cs_set:Nn \__fontspec_load_external_fontoptions:Nn
+{}
+\ExplSyntaxOff
+\usepackage[english,russian]{babel}   %% загружает пакет многоязыковой вёрстки
+\usepackage{fontspec}      %% подготавливает загрузку шрифтов Open Type, True Type и др.
+\defaultfontfeatures{Ligatures={TeX},Renderer=Basic}  %% свойства шрифтов по умолчанию
+\setmainfont[Ligatures={TeX,Historic}]{Times New Roman} %% задаёт основной шрифт документа
+\setsansfont{Comic Sans MS}                    %% задаёт шрифт без засечек
+\setmonofont{Courier New}
+\usepackage{indentfirst}
+\frenchspacing
+% ₽€\$£¥ %currency symbols
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

@@ -1,0 +1,57 @@
+% !TeX program = lualatex -synctex=1 -interaction=nonstopmode --shell-escape %.tex
+\documentclass[beamer,xcolor=dvipsnames]{standalone}
+\usepackage{borochkin_unicode_symbols}
+\RequirePackage[rus]{borochkin_tikz}
+
+\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+
+\begin{document}
+\begin{standaloneframe}[shrink=0, fragile]
+\begin{tikzpicture}
+\tikzstyle{line} = [ draw, -latex']
+\tikzstyle{block} = [draw, fill=white, rectangle, 
+minimum height=1.5em, minimum width=6em, text width=3cm,align=center, text height=3ex, text depth=2ex,]
+
+\coordinate (yd)   at (0,.5);
+\coordinate (xd)   at (0.5,0);
+
+\node (guarantee) at (2.5,0) [block] {Клиент};
+\node (bank1) at (0,-2.5) [block] {Банк №1};
+\node (bank2) at (5,-2.5) [block] {Банк №2-гарант};
+
+\onslide<2->{
+	\draw[thick, rounded corners, <->] (bank1) |- 
+	node[left,yshift=-1cm]{1}
+	(guarantee);
+}
+
+\onslide<3->{
+	\draw[thick, rounded corners, <->] (bank2) |- 
+	node[left,yshift=-.8cm]{2}
+	($(guarantee.east) - (0,.25)$);
+}
+
+\onslide<4->{
+	\draw[thick, ->] (guarantee) to node[auto,swap] {3} (bank2);
+}
+
+\onslide<5->{
+	\draw[thick, ->] (bank1) to node[above,swap] {4} (bank2);
+}
+
+\onslide<6->{
+	\draw[thick, rounded corners, <-] ($(bank1.south) + (xd)$) 
+	-- node[xshift=2cm] {5} ($(bank1.south) - (yd) +(xd)$) 
+	-| ($(bank2.south) - (xd)$);
+}
+
+\onslide<7->{
+	\draw[thick, rounded corners, <-] 
+	($(bank2.north) + (xd)$) |- 
+	node[left,yshift=-1cm]{6}
+	($(guarantee.east) + (0,.25)$);
+}
+\end{tikzpicture}
+\end{standaloneframe}
+\end{document}

@@ -1,0 +1,23 @@
+% !TeX program = lualatex -synctex=1 -interaction=nonstopmode --shell-escape %.tex
+\documentclass[beamer,xcolor=dvipsnames]{standalone}
+\RequirePackage[rus]{borochkin_tikz}
+
+\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+
+\begin{document}
+\begin{standaloneframe}[shrink=0, fragile]
+\begin{tikzpicture}
+% coordinates
+\draw[thick,<->] (0,4.5) node[anchor= east] {Издержки} -- (0,0) -- (4.5,0) 
+node[anchor=north] {Время};
+
+\draw[domain=.5:4.5,smooth,variable=\x,black] plot ({\x},{1.125/2.5^2*(\x-5)^2+.125}) node[anchor= south west]{$C_T$};
+
+\onslide<2->{\draw[domain=.5:4.5,smooth,variable=\x,black] plot ({\x},{1.125/2.5^2*\x^2+.125}) node[anchor=west]{$C_W$};}
+
+\onslide<3->{\draw[domain=.5:4.5,smooth,variable=\x,black] 
+	plot ({\x},{(9*\x^2)/25-(9*\x)/5+19/4}) node[anchor= east] {$C_E=C_W+C_T$};}
+\end{tikzpicture}
+\end{standaloneframe}
+\end{document}

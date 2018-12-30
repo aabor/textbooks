@@ -1,0 +1,40 @@
+% !TeX program = lualatex -synctex=1 -interaction=nonstopmode --shell-escape %.tex
+\RequirePackage{luatex85,shellesc}
+
+\documentclass[beamer,xcolor=dvipsnames]{standalone}
+\RequirePackage[rus]{borochkin_tikz}
+
+\begin{document}
+\begin{standaloneframe}[shrink=0, fragile]
+\begin{tikzpicture}
+\tikzstyle{block} = [draw, fill=white, rectangle, 
+minimum height=1.5em, minimum width=6em, node distance=0.3cm]
+
+\node [block] (ranalys) {Анализ риска}; 
+\node [block, below left=of ranalys, node distance=0.3cm] (identification) {Выявление};       
+\node [block, below right=of ranalys, node distance=0.3cm] (evaluation) {Оценка};       
+\node [block, anchor=center, below=1cm of ranalys, text width=4.5cm,align=center] (methods) {Выбор методов\\воздействия на риск\\при сравнении их\\эффективности};       
+\node [block, below=0.2cm of methods, node distance=0.3cm] (solution) {Принятие решения};       
+\node [block, below=0.2cm of solution, node distance=0.3cm] (influence) {Воздействие на риск};       
+\node [block, below=0.2cm of influence, node distance=0.3cm] (save) {Сохранение};       
+\node [block, below right=of influence, node distance=0.3cm] (reduce) {Уменьшение};       
+\node [block, below left=of influence, node distance=0.3cm] (convey) {Передача};       
+\node [block, below=0.2cm of save, node distance=0.3cm] (control) {Контроль результатов};       
+
+\draw [-] (ranalys) -- (identification);
+\draw [-] (ranalys) -- (evaluation);
+\draw [-] (evaluation) -- (methods);
+\draw [-] (identification) -- (methods);
+\draw [-] (methods) -- (solution);
+\draw [-] (solution) -- (influence);
+\draw [-] (influence) -- (save);
+\draw [-] (influence) -- (reduce.north);
+\draw [-] (influence) -- (convey.north);
+\draw [-] (control) -- (reduce);
+\draw [-] (control) -- (convey);
+\draw [-] (save) -- (control);
+
+\end{tikzpicture}
+
+\end{standaloneframe}
+\end{document}

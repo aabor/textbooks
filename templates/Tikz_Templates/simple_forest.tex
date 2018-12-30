@@ -1,0 +1,24 @@
+\documentclass[tikz,multi,border=10pt]{standalone}
+\usepackage[edges]{forest}
+\usepackage{array}
+\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+\usetikzlibrary{arrows.meta,shadows}
+\begin{document}
+\begin{forest}
+	for 2=calign with current, for children={for descendants={circle,draw}}
+	[every step,
+	[independent,for nodewalk={
+		1,Nodewalk={every step=independent}{1,every step=fill,1}{},1
+	}{draw=red},
+	[[[[]]]]]
+	[inherited,for nodewalk={
+		1,Nodewalk={every step=inherited}{1,every step=fill,1}{},1
+	}{draw=red},
+	[[[[]]]]]
+	[shared,for nodewalk={
+		1,Nodewalk={every step=shared}{1,every step=fill,1}{},1
+	}{draw=red},
+	[[[[]]]]]]
+\end{forest}
+\end{document}

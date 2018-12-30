@@ -1,0 +1,32 @@
+% !TeX program = lualatex -synctex=1 -interaction=nonstopmode --shell-escape %.tex
+\documentclass[beamer,xcolor=dvipsnames]{standalone}
+\RequirePackage[rus]{borochkin_tikz}
+
+\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+
+\begin{document}
+\begin{standaloneframe}[shrink=0, fragile]
+	
+\tikzstyle{block} = [draw, fill=white, rectangle, 
+minimum height=4em, minimum width=6em]
+\begin{tikzpicture}[auto, node distance=4.5cm,>=latex']
+
+\node [block] (CompanyA) {Company A}; 
+\node [block, below=of CompanyA] (GermanBank) {German Bank};       
+\node [block, right=of CompanyA] (CompanyB) {Company B};       
+\node [block, below=of CompanyB] (USABank) {USA Bank};       
+
+\draw [<-] ([xshift=-25pt]CompanyA.south) --node [name=o1, label distance=0.5cm,text depth=3.5ex,rotate=90, pos=0.7] {$(1) 10mln EUR$} ([xshift=-25pt]GermanBank.north);
+\draw [->] (CompanyA.south) --node [name=o2, label distance=0.5cm,text depth=3.5ex,rotate=90, pos=0.9] {$(6)0.7mln EUR$} (GermanBank.north);
+\draw [->] ([xshift=25pt]CompanyA.south) --node [name=o3,label distance=0.5cm,text depth=3.5ex,rotate=90, pos=0.9] {$(10) 10mln EUR$} ([xshift=25pt]GermanBank.north);
+
+\draw [<-] ([xshift=-25pt]CompanyB.south) --node [name=o4, label distance=0.5cm,text depth=3.5ex,rotate=90, pos=0.7] {$(8) 12.5mln USD$} ([xshift=-25pt]USABank.north);
+\draw [->] (CompanyB.south) --node [name=o5, label distance=0.5cm,text depth=3.5ex,rotate=90, pos=0.9] {$(7)1.125mln USD$} (USABank.north);
+\draw [->] ([xshift=25pt]CompanyB.south) --node [name=o6,label distance=0.5cm,text depth=3.5ex,rotate=90, pos=0.9] {$(3) 12.5mln USD$} ([xshift=25pt]USABank.north);
+
+\draw [<->] ([yshift=15pt]CompanyA.east) --node [name=o4, align=left, below] {$(2)10 mlnEUR\rightarrow$ \\ $(9)\leftarrow 12.5mln USD$} ([yshift=15pt]CompanyB.west);
+\draw [<->] ([yshift=-15pt]CompanyA.east) --node [name=o4, align=left, below] {$(4) 1.25mln USD\rightarrow$\\$(5)\leftarrow 0.8mln EUR$} ([yshift=-15pt]CompanyB.west);
+\end{tikzpicture}
+\end{standaloneframe}
+\end{document}

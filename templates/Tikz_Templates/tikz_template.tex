@@ -1,0 +1,14 @@
+% !TeX program = lualatex -synctex=1 -interaction=nonstopmode --shell-escape %.tex
+\documentclass[beamer,xcolor=dvipsnames]{standalone}
+\geometry{papersize={6cm,4cm}}
+\setbeamersize{text margin left=5mm,text margin right=5mm, sidebar width left=0mm} 
+\usepackage{borochkin_unicode_symbols}
+\RequirePackage[rus]{borochkin_tikz}
+
+\begin{document}
+	\begin{standaloneframe}[shrink=0, fragile]
+		\begin{tikzpicture}
+			\draw[->] (0,0) -- (1,1);
+		\end{tikzpicture}
+	\end{standaloneframe}
+\end{document}

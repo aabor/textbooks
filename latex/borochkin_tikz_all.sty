@@ -1,0 +1,59 @@
+\ProvidesPackage{borochkin_tikz_all}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% package option section
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newif\if@loadrus%\@loadrusfalse
+\DeclareOption{rus}{\@loadrustrue}
+\newif\if@loadeng%\@loadrusfalse
+\DeclareOption{eng}{\@loadengtrue}
+
+\ProcessOptions\relax
+
+
+\usepackage{fontspec}
+\setmainfont{CMU Serif}
+\setsansfont{CMU Sans Serif}
+\setmonofont{CMU Typewriter Text}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\if@loadrus{
+\usepackage[french, italian, english, russian]{babel}% main language must be last
+% End load russian  
+\fi
+
+\if@loadeng
+\usepackage[french, italian, russian, english]{babel}% main language must be last
+% End Load english
+\fi
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{tikz}
+\usepackage{pgfkeys}
+\usetikzlibrary{graphs, graphdrawing, shapes,shadows,arrows,arrows.meta, mindmap}
+\usetikzlibrary{er, matrix,positioning,patterns,calc, shapes.geometric}
+\usetikzlibrary{fit,overlay-beamer-styles, shapes.callouts}
+\usetikzlibrary{decorations.pathreplacing}
+\usetikzlibrary{math} % define variables in tickz environment
+\usetikzlibrary{intersections}
+\usegdlibrary{trees,force,layered}
+\usepackage[edges]{forest}
+\usepackage{array}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\tikzset{
+  invisible/.style={opacity=0},
+  visible on/.style={alt=#1{}{invisible}},
+  alt/.code args={<#1>#2#3}{%
+    \alt<#1>{\pgfkeysalso{#2}}{\pgfkeysalso{#3}}%
+  },
+  ar/.style={
+  ->,
+  >=latex
+  },
+  dot/.style={circle,inner sep=1pt,fill,name=#1}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\definecolor{beamer@nngublue}{rgb}{0.075, 0.506, 0.753}
+\definecolor{beamer@nngudarkblue}{rgb}{0.000, 0.392, 0.659}
+\definecolor{beamer@nngulightblue}{rgb}{0.961 0.961 0.957}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

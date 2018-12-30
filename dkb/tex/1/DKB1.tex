@@ -1,0 +1,60 @@
+% !TeX program = lualatex -synctex=1 -interaction=nonstopmode %.tex
+
+\documentclass[12pt]{beamer}
+\RequirePackage[rus]{borochkin_beamer}
+
+\AfterPreamble{\hypersetup{
+	pdftitle={Деньги. Кредит. Банки.},
+}}
+
+
+\title[Деньги. Кредит. Банки.]{Деньги. Кредит. Банки\\Курс лекций\\Часть 1. Деньги}
+\author{к.э.н. Александр Александрович Борочкин}
+\institute{Нижегородский государственный университет}
+\subject{Финансы и кредит}
+\keywords{Теория денег, денежно-кредитная политика, банковское дело, процентные ставки, теории кредита}
+\logo{\includelogonngurus}%\logo{ННГУ}
+\date{\the\year}
+
+
+\begin{document}
+
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+%\include{Literatura}
+\section*{Литература}
+\subfile{DKB_Literatura}
+
+\setnextsection{1}
+\section{Понятие денег}
+\subfile{money_definition}
+
+\section{Бартерная экономика}
+\subfile{barter}
+
+\section{Эволюция денег}
+\subfile{money_evolution}
+
+\section{Денежная масса}
+\subfile{money_supply}
+
+\section{Процентные ставки}
+\subfile{interest_rates}
+
+\section{Банковский мультипликатор}
+\subfile{banks_and_money_supply}
+
+\section{Центральный банк}
+\subfile{cb_functions}
+
+% final frame
+\begin{frame}
+\begin{center}
+\huge{Конец}
+\end{center}
+\end{frame}
+
+\end{document}

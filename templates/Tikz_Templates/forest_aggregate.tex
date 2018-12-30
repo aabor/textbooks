@@ -1,0 +1,16 @@
+\documentclass[tikz,multi,border=10pt]{standalone}
+\usepackage[edges]{forest}
+\usepackage{array}
+\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+\usetikzlibrary{arrows.meta,shadows}
+\begin{document}
+\begin{forest}
+  delay={
+    aggregate postparse=int,
+    content/.max=%
+      {aggregate_sum("content","children")}%
+      {every step={content/.register=aggregate value},children}%
+  } [ [[1][2][3]] [[3][4][5]] [[2][3][4]] ]
+\end{forest}
+\end{document}

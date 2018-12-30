@@ -1,0 +1,82 @@
+% !TeX program = lualatex -synctex=1 -interaction=nonstopmode --shell-escape %.tex
+\documentclass[beamer,xcolor=dvipsnames]{standalone}
+\usepackage{borochkin_unicode_symbols}
+\RequirePackage[rus]{borochkin_tikz}
+
+\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+
+\begin{document}
+\begin{standaloneframe}[shrink=0, fragile]
+\begin{tikzpicture}
+\tikzstyle{line} = [ draw, -latex']
+\tikzstyle{block} = [draw, fill=white, rectangle, 
+minimum height=1.5em, minimum width=6em, 
+text width=3cm,align=center, 
+text height=3ex, text depth=2ex,]
+\tikzstyle{block_two_line} = [draw, fill=white, rectangle, 
+minimum height=1.5em, minimum width=6em, 
+text width=3cm,align=center, 
+text height=2ex, text depth=3ex,]
+\node (seller) at (0,2) [block] {Поставщик};	  
+\node (buyer) at (4.5,2) [block] {Покупатель};
+\node (bankofseller) [below=1cm of seller, block_two_line] {Фактор-поставщика};
+\node (bankofbuyer) at (4.5,0) [below=1cm of buyer, block_two_line] {Фактор-покупателя};
+
+\onslide<2->{
+	\draw[thick, <->] 
+	($(bankofbuyer.north east) + (-2.5,0)$) 
+	to node[left,swap] {1} 
+	($(bankofbuyer.north east) + (-2.5,1)$); 
+}
+\onslide<3->{
+	\draw[thick, <->] 
+	($(bankofseller.east) + (0,.25)$) 
+	to node[above,swap] {2} 
+	($(bankofseller.east) + (1.25,.25)$);
+}
+
+\onslide<4->{
+	\draw[thick, <->] 
+	($(bankofseller.north west) + (.5,0)$) 
+	to node[left,swap] {3} 
+	($(bankofseller.north west) + (.5,1)$); 
+}
+
+\onslide<5->{
+	\draw[thick, <-] 
+	($(bankofseller.north west) + (1.5,0)$) 
+	to node[left,swap] {4} 
+	($(bankofseller.north west) + (1.5,1)$); 
+	\draw[thick, ->] 
+	($(bankofseller.east) + (0,-.25)$) 
+	to node[above,swap] {4} 
+	($(bankofseller.east) + (1.25,-.25)$);
+}
+
+\onslide<6->{
+	\draw[thick, ->] (seller.east) to node[above,swap] {5} (buyer.west);
+}
+
+\onslide<7->{
+	\draw[thick, ->] 
+	($(bankofseller.north west) + (2.2,0)$) 
+	to node[left,swap] {6} 
+	($(bankofseller.north west) + (2.2,1)$); 
+}
+
+\onslide<8->{
+	\draw[thick, ->] (buyer.south)	to node[left,swap] {7} 
+	(bankofbuyer.north); 
+	\path [thick, line,rounded corners] (bankofbuyer) |- node[above, xshift=-2.3cm] 	{7} ($(bankofbuyer.south west) + (-0.5,-0.5)$) -|  (bankofseller.south);
+}
+
+\onslide<9->{
+	\draw[thick, ->] 
+	($(bankofseller.north west) + (3,0)$) 
+	to node[left,swap] {8} 
+	($(bankofseller.north west) + (3,1)$); 
+}
+\end{tikzpicture}
+\end{standaloneframe}
+\end{document}

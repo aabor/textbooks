@@ -1,0 +1,108 @@
+\documentclass[international_finance_p2.tex]{subfiles}
+
+\begin{document}
+\setbeamercovered{transparent}
+\section{International Parities}
+
+\subsection{Interest Parity. Interest Rates and Inflation}
+\begin{frame}{Interest Parity}{Interest Rates and Inflation}
+\begin{itemize}[<+->]
+\item
+Interest rate parity is a no-arbitrage condition on the market under which investors will be indifferent to interest rates available on bank deposits in two different currencies. 
+\item
+No-arbitrage condition exists when the market prices do not allow for profitable arbitrage. 
+\item
+This condition does not always hold and this create potential opportunities for riskless profits from arbitrage deals. 
+\item
+Two assumptions central to interest rate parity are capital mobility and perfect substitutability of domestic and foreign assets.
+\end{itemize}
+\end{frame}
+\begin{frame}{Two forms of interest rate parities}
+\begin{itemize}[<+->]
+\item
+uncovered interest rate parity (UIRP) exists when exposure to foreign exchange risk  is uninhibited;
+\item
+covered interest rate parity (CIRP) exists when a forward contract has been used to cover  exchange rate risk
+\end{itemize}
+\end{frame}
+\begin{frame}{Uncovered interest rate parity (UIRP)}
+\begin{align}
+1+i_{USD}=\frac{E_t S_{t+k}}{S_t}(1+i_{EUR}),
+\end{align}
+where
+$E_t S_{t+k}$ is the expected future spot exchange rate at time $t + k$;
+
+$k$ is the number of periods into the future from time $t$;
+
+$S_t$ is the current spot exchange rate at time $t$;
+
+$i_{USD},\quad i_{EUR}$  are the interest rates in the domestic and foreign currencies, for example USD and EUR respectively.
+
+The dollar return on dollar deposits, $1+i_{USD}$, is shown to be equal to the dollar return on euro deposits, $\frac{E_t S_{t+k}}{S_t}(1+i_{EUR})$.
+\end{frame}
+
+\begin{frame}{Covered interest rate parity (CIRP)}
+\begin{align}
+1+i_{USD}&=\frac{F_t}{S_t}(1+i_{EUR}) \quad \nonumber or\\
+i_{USD}-i_{EUR}&=\frac{F_t-S_t}{S_t}
+\end{align}
+
+where
+
+$F_t$ is the forward exchange rate at time $t$;
+
+The dollar return on dollar deposits, $1+i_{USD}$, is shown to be equal to the dollar return on euro deposits, $\frac{F_t}{S_t}(1+i_{EUR})$.
+
+Covered interest arbitrage is an arbitrage trading strategy whereby an investor capitalizes on the interest rate differential between two countries by using a forward contract to cover exchange rate risk.
+
+\end{frame}
+\subsection{The relation between Exchange Rates, Interest Rates, and Inflation}
+\begin{frame}{The relation between Exchange Rates, Interest Rates, and Inflation}
+\begin{itemize}[<+->]
+\item
+The nominal interest rate is the rate actually observed in the market. 
+\item
+The real rate is a concept that measures the return after adjusting for inflation.
+\end{itemize}
+\end{frame}
+\begin{frame}{The Fisher effect}
+\begin{align}
+i_{USD}&=r_{USD}+p^{USD}\\
+i_{EUR}&=r_{EUR}+p^{EUR}
+\end{align}
+
+where 
+
+$i$ is the nominal interest rate;
+
+$r$ is the real interest rate;
+
+$p^{USD}$ is the expected rate of inflation (in this case in US dollars or EUR).
+\end{frame}
+
+\begin{frame}{Real interest rate parity (RIRP)}
+\begin{align}
+UIRP:\Delta E_t S_{t+k}&=E_t S_{t+k}-S_t\nonumber \\
+&=i_{USD}-i_{EUR},\\
+E_t S_{t+k}&= \Delta E_t (p_{t+k}^{USD} ) - \Delta E_t (p_{t+k}^{EUR} ),
+\end{align}
+
+where
+
+$p_{t+k}^{USD}, \quad p_{t+k}^{EUR}$ represent expected rate of inflation for both currencies respectively (dollar and Euro in this example).
+
+If the above conditions hold, then they can be combined and rearranged as the following:
+\begin{align}
+RIRP:i_{USD} - \Delta E_t (p_{t+k}^{USD})=i_{EUR}- \Delta E_t (p_{t+k}^{EUR} ),
+\end{align}
+\end{frame}
+\begin{frame}{The link between interest rates, inflation, and exchange rates}
+\begin{align}
+RIRP:i_{USD}-i_{EUR}&=p_{t+k}^{USD}-p_{t+k}^{EUR}\nonumber\\
+&=\frac{F_t-S_t}{S_t}.
+\end{align}
+The interest differential is equal to expected rates of inflation differential and is also equal to the forward premium.
+
+The parity condition suggests that real interest rates will equalize between countries and that capital mobility will result in capital flows that eliminate opportunities for arbitrage.
+\end{frame}
+\end{document}

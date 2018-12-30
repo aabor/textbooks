@@ -1,0 +1,52 @@
+% !TeX program = lualatex -synctex=1 -interaction=nonstopmode --shell-escape %.tex
+\documentclass[beamer,xcolor=dvipsnames]{standalone}
+\RequirePackage[rus]{borochkin_tikz}
+
+\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+
+\begin{document}
+\begin{standaloneframe}[shrink=0, fragile]
+\begin{tikzpicture}
+\tikzset{
+	dot/.style={circle,inner sep=1pt,fill,name=#1},
+}
+% grid 
+%\draw[step=.5cm,gray,very thin] (0,0) grid (5.9,5.9);
+
+% Draw axes
+\draw [<->,thick] (0,3.5) node (yaxis) [above]{$C$}
+|- (3,0) node (xaxis) [right] {$r$};
+
+
+\draw[domain=.1:2.5,smooth,variable=\x,black, name path=DD] 
+plot ({\x},{3-0.5*\x}) node[anchor=  west, black]{$D$};
+
+\draw[domain=0:1.3,smooth,variable=\x,black, name path=SS] 
+plot ({\x},{5/3 + 1.2*\x}) node[anchor=  west, black]{$S_0$};
+
+\draw[domain=0:2.6,smooth,variable=\x,black, name path=SS1] 
+plot ({\x},{1.2*\x}) node[anchor=  west, black]{$S_1$};
+
+\path [name intersections={of=SS and DD,by=opt}];
+\path [name intersections={of=SS1 and DD,by=opt1}];
+%
+\path[dashed, name path=aline] (0,2.8) --(2.7,2.8);
+\path [name intersections={of=SS and aline,by=a0}];
+\path [name intersections={of=SS1 and aline,by=a1}];
+\draw[thick, ->] (a0)--(a1);
+%
+\draw[dashed] (yaxis |- opt) node[left] {$C_0$}
+-| (xaxis -| opt) node[below] {$r_0$};
+\node[dot=opt] at (opt) {};
+%
+\draw[dashed] (yaxis |- opt1) node[left] {$C_1$}
+-| (xaxis -| opt1) node[below] {$r_1$};
+\node[dot=opt] at (opt1) {};
+
+
+
+\end{tikzpicture}
+
+\end{standaloneframe}
+\end{document}

@@ -1,0 +1,154 @@
+\ProvidesPackage{borochkin}
+\usepackage{subfiles}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% package option section
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newif\if@loadrus%\@loadrusfalse
+\DeclareOption{rus}{\@loadrustrue}
+\newif\if@loadeng%\@loadrusfalse
+\DeclareOption{eng}{\@loadengtrue}
+
+\ProcessOptions\relax
+\if@loadrus{
+\usepackage[english,russian]{babel}   %% загружает пакет многоязыковой вёрстки
+%% fontspec cannot be loaded after babel any longer (work around the issue as follows)
+\let\cyrillicencoding\relax
+\let\latinencoding\relax 
+\usepackage{fontspec}      %% подготавливает загрузку шрифтов Open Type, True Type и др.
+\defaultfontfeatures{Ligatures={TeX},Renderer=Basic}  %% свойства шрифтов по умолчанию
+\setmainfont[Ligatures={TeX,Historic}]{PT Sans} % for linux
+%\setmainfont[Ligatures={TeX,Historic}]{Times New Roman} %% for windows
+\setsansfont{Comic Sans MS}                    %% задаёт шрифт без засечек
+%\setmonofont{Courier New}
+% End load russian  
+\fi
+
+\if@loadeng
+\usepackage[utf8]{luainputenc}
+\usepackage[T1]{fontenc}
+\usepackage{pxfonts}
+% End Load english
+\fi
+
+\usepackage{indentfirst}
+\frenchspacing
+
+
+% include before inpute encoding
+\usepackage{tagging}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{gensymb}
+
+%%%%%%%%%%%%%%%%%%%%
+%% for loop in code
+\usepackage{forloop} 
+\newcounter{slideno}
+%%%%%%%%%%%%%%%%%%%%
+
+
+\usepackage{booktabs}
+\usepackage{bookmark}
+\usepackage{etoolbox}
+\usepackage{lipsum}
+\usepackage{multicol}
+
+\usepackage{multirow}% multirow cells in tables
+\usepackage{pbox}% line breaks in tables \pbox{5cm}{aaa // bbb}
+
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\PassOptionsToPackage{hyphens}{url}\usepackage{hyperref}
+\definecolor{blue}{rgb}{0,0,1}% blue
+\definecolor{lightblue}{rgb}{0,0.3,0.9}% light blue
+\definecolor{redblue}{rgb}{0.3,0,0.9}% red blue
+\hypersetup{
+ breaklinks=true
+ ,linkcolor={blue}
+ ,citecolor={lightblue}
+ ,urlcolor={redblue}
+ ,unicode=true
+ ,bookmarksopen=true
+ ,bookmarksopenlevel=4 
+ ,hidelinks
+}
+\usepackage{array}
+\usepackage{cite,enumerate,float,indentfirst}
+
+\usepackage{paralist} %inline lists
+
+\usepackage[font=small, skip=2pt]{caption}%captions in figures and tables
+\usepackage[font=small]{subcaption}
+\captionsetup[figure]{labelformat=simple, labelsep=colon}
+\usepackage{varwidth}
+\DeclareCaptionFormat{myformat}{\hrulefill\\#1#2#3}
+
+
+\usepackage{media9} % embedd video files in pdf document
+
+% numbering: figures, tables, exercises
+\numberwithin{table}{section}
+\numberwithin{figure}{section}
+\numberwithin{equation}{section}
+\def\equationautorefname~#1\null{%
+  Equation~(#1)\null
+}
+\renewcommand{\thefigure}{\thesection.\arabic{figure}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% tables
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{colortbl} % change  colors in tabular environment
+\usepackage{array}
+\newcommand{\ra}[1]{\renewcommand{\arraystretch}{#1}}
+\newcommand{\setrulecolor}{\arrayrulecolor{beamer@nngudarkblue}}
+\newcommand{\cnamef}[1]{\textbf{\textcolor{beamer@nngudarkblue}{#1}}}
+\newcommand{\captionf}[1]{\textcolor{beamer@nngudarkblue}{#1}}
+\newcommand{\rules}[2]{\cmidrule(r){#1}\cmidrule(l){#2}}
+\renewcommand{\thetable}{\thesection.\arabic{table}}
+% first argument sets vertical alignment t - top, c -center, b- bottom, second arg - text to insert in the cell 
+\newcommand{\cellwithlinebreak}[2]{\noindent\parbox[#1]{\hsize}{\raggedright #2}}
+\newcommand{\tabitem}{\textcolor{beamer@nngudarkblue}{\textbullet~~}}
+
+%% patch to show midrules in beamer if color changed
+\makeatletter
+\patchcmd{\@cmidrulea}{\hfill}{\hfill\kern\z@}{}{}
+\patchcmd{\@cmidruleb}{\hfill}{\hfill\kern\z@}{}{}
+\makeatother
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\newcommand{\includelogonngurus}{\includegraphics[height=0.15\paperheight]{unn_logo_rus1_white.png}}
+\newcommand{\includelogonngueng}{\includegraphics[height=0.15\paperheight]{unn_logo_eng1_white.png}}
+
+
+\usepackage[ampersand]{easylist}%list using a more convenient syntax
+
+%\usepackage{subfig} % put two or more subfloats side by side
+
+% some color definitions
+\definecolor{lightgray}{rgb}{0.83, 0.83, 0.83}
+
+% hidden cell in tables and arrays
+%\newcommand{\hiddencell}[2]{\hspace{0pt}\action<#1->{#2}}
+\newcommand{\hiddencell}[2]{\action<#1->{#2}}
+
+
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}m{#1}}
+\newcolumntype{C}[1]{>{\centering\arraybackslash}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\arraybackslash}m{#1}}
+
+
+%\usepackage{cmap} %allows for Adobe Reader to search the document in Cyrillic.
+% default titles fontsize in beamer is 18pt
+\newcommand\setfontsize[1]{\fontsize{#1}{24}\selectfont}
+
+%% get automatic date generated in a LaTeX file
+\usepackage[useregional]{datetime2}
+
+\newcommand{\professor}{
+	\usetag{professor}
+}  
+

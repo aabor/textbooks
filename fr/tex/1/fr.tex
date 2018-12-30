@@ -1,0 +1,52 @@
+\documentclass{beamer}
+%\usepackage{import}
+\RequirePackage{subfiles}
+
+\RequirePackage[rus]{borochkin_beamer}
+%\usepackage{amsmath}
+
+\AfterPreamble{\hypersetup{
+	pdftitle={Финансовые риски в кредитной сфере},
+}}
+
+
+\title[Финансовые риски в кредитной сфере]{Финансовые риски в кредитной сфере\\Курс лекций}
+\author{к.э.н. Александр Александрович Борочкин}
+\institute{Нижегородский государственный университет}
+\subject{Финансы и кредит}
+\keywords{Финансовый риск, Cтоимостная мера риска, Value at risk, банковские риски}
+\logo{\includelogonngurus}%\logo{ННГУ}
+\date{2016}
+
+
+\begin{document}
+
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+%\include{Literatura}
+\subfile{Literatura}
+
+\section{Управление рисками}
+\subfile{riskintro}
+
+\section{Модель Value at Risk (VaR)}
+%\include{var}
+\subfile{var}
+
+\section{Банковские риски}
+\subfile{bankrisktypes}
+
+\section{Опционы}
+\subfile{options_rus}
+
+% final frame
+\begin{frame}
+\begin{center}
+\huge{Конец}
+\end{center}
+\end{frame}
+
+\end{document}

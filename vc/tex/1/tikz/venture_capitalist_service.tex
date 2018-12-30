@@ -1,0 +1,60 @@
+% !TeX program = lualatex -synctex=1 -interaction=nonstopmode --shell-escape %.tex
+\documentclass[beamer,xcolor=dvipsnames]{standalone}
+\RequirePackage[rus]{borochkin_tikz}
+
+\begin{document}
+\begin{standaloneframe}[shrink=23, fragile]
+\begin{tikzpicture}
+\path[mindmap,
+	grow cyclic,
+	every node/.style=concept,
+	concept color=black!10,
+	level 1/.append style={level distance=4cm, sibling angle=10},
+	level 2/.append style={level distance=3cm, sibling angle=45},
+	root concept/.append style={concept, concept color=black!10},
+]
+node [root concept] {Услуги}
+child [level distance=4cm, concept color=red!40, level distance=6cm, visible on=<2->] { node[visible on=<2->] {отбор идей}
+}
+child [concept color=blue!50, visible on=<3->] { node[visible on=<3->] {Финансовые услуги}
+	child[visible on=<4->] 
+		{ node[visible on=<4->] {каналы финансирования}}
+	child[visible on=<5->]
+		{ node[visible on=<5->] {длинные деньги}}
+	child[visible on=<6->] 
+		{ node[visible on=<6->] {выход на биржу}}
+}
+child [concept color=yellow!50, level distance=7cm, visible on=<7->] { node[visible on=<7->] {менеджмент}
+	child[visible on=<8->] 
+		{ node[visible on=<8->] {новые}}
+	child[visible on=<9->]
+		{ node[visible on=<9->] {отбор}}
+	child [visible on=<10->]
+		{ node[visible on=<10->] {договор}}
+	child [visible on=<11->]
+		{ node[visible on=<11->] {мотивация}}
+	child[visible on=<12->]
+		{ node[visible on=<12->] {замена}}
+}
+child [concept color=magenta!40, level distance=9cm, visible on=<13->] { node[visible on=<13->] {Стратегия}
+	child[visible on=<14->] { node[visible on=<14->] {стратегия}}
+	child[visible on=<15->] { node[visible on=<15->] {продукция}}
+	child[visible on=<16->] { node[visible on=<16->] {производство}}
+	child[visible on=<17->] { node[visible on=<17->] {поставщики}}
+	child[visible on=<18->] { node[visible on=<18->] {маркетинг}}
+	child[visible on=<19->] { node[visible on=<19->] {финансовое оздоровление}}
+}
+child [level distance=6cm, concept color=OliveGreen!40,visible on=<20->] { node[visible on=<20->] {текущая деятельность}
+}
+child [concept color=orange!50, level distance=6cm,visible on=<21->] { node[visible on=<21->] {контакты}
+	child[visible on=<22->] { node[visible on=<22->] {развитие}}
+	child[visible on=<23->] { node[visible on=<23->] {поставщики}}
+	child[visible on=<24->] { node[visible on=<24->] {маркетинг}}
+	child[visible on=<25->] { node[visible on=<25->] {профессиональные сообщества}}
+}
+child [level distance=4cm, concept color=ForestGreen!40, visible on=<26->] { node[visible on=<26->] {друг}
+}
+;
+\end{tikzpicture}
+\end{standaloneframe}
+\end{document}

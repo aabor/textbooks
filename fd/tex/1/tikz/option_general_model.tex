@@ -1,0 +1,24 @@
+% !TeX program = lualatex -synctex=1 -interaction=nonstopmode --shell-escape %.tex
+\RequirePackage{luatex85,shellesc}
+
+\documentclass[beamer,xcolor=dvipsnames]{standalone}
+\RequirePackage[rus]{borochkin_tikz}
+\RequirePackage{optionsStyles}
+
+\begin{document}
+
+\begin{standaloneframe}[shrink=25, fragile]
+\begin{tikzpicture}[auto, node distance=0.3cm,>=latex']
+\scriptsize
+\node [block] (sc) {$S$ \nodepart{two} $C$}; 
+\node [block, above right=of sc, node distance=0.3cm] (uS) {$u \cdot S$ \nodepart{two} $C_u$};       
+\node [block, below right=of sc, node distance=0.3cm] (dS) {$d \cdot S$ \nodepart{two} $C_d$};       
+\node [block, above right=of uS, node distance=0.3cm, text width=1.3cm] (definitions) {Валютный курс \nodepart{two} Цена опциона};       
+\node [timeblock, left=of definitions, node distance=0.3cm, text width=2cm] (time1) {Момент окончания $t=T$};
+\node [timeblock, left=0.8cm of time1, text width=1.5cm] (time0) {Момент начала $t=0$};
+
+\draw [-] (sc) -- (uS);
+\draw [-] (sc) -- (dS);
+\end{tikzpicture}
+\end{standaloneframe}
+\end{document}

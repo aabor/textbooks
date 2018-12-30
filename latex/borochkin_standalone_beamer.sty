@@ -1,0 +1,37 @@
+\ProvidesPackage{borochkin_standalone_beamer}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% fonts
+\usepackage{fontspec}
+\ExplSyntaxOn
+\cs_set:Nn \__fontspec_load_external_fontoptions:Nn
+{}
+\ExplSyntaxOff
+\setmainfont{PT Sans} % need to set font for all unicode symbols
+\setsansfont{PT Sans} % need to set font for all unicode symbols
+\setmonofont{PT Sans} % need to set font for all unicode symbols
+% ₽€\$£¥ %currency symbols
+\usepackage{polyglossia}
+\setmainlanguage{russian}
+\setotherlanguage{english}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% tikz
+\usepackage{tikz}
+\usetikzlibrary{matrix} %matrixes in tikz
+\usetikzlibrary{positioning} % hard code the distances between nodes
+\usetikzlibrary{overlay-beamer-styles}% beamer overlay
+\usetikzlibrary{math} % define variables in tickz environment
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\tikzset{
+	invisible/.style={opacity=0},
+	visible on/.style={alt=#1{}{invisible}},
+	alt/.code args={<#1>#2#3}{%
+		\alt<#1>{\pgfkeysalso{#2}}{\pgfkeysalso{#3}}%
+	},
+	ar/.style={
+		->,
+		>=latex
+	},
+	dot/.style={circle,inner sep=1pt,fill,name=#1}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

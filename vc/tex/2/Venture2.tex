@@ -1,0 +1,55 @@
+% !TeX program = lualatex -synctex=1 -interaction=nonstopmode --shell-escape %.tex
+\documentclass[12pt]{beamer}
+\RequirePackage[rus]{borochkin_beamer}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\professor
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\AfterPreamble{\hypersetup{
+	pdftitle={Основы венчурных инвестиций},
+}}
+
+
+\title[Основы венчурных инвестиций]{Основы венчурных инвестиций\\Курс лекций\\Часть 2}
+\author{к.э.н. Александр Александрович Борочкин}
+\institute{Нижегородский государственный университет}
+\subject{Финансы и кредит}
+\keywords{венчурные инвестиции, венчурные фонды, инновации, конвертируемые облигации, привилегированные конвертируемые акции, нанотехнологии, государственная поддержка, управляющие компании, бизнес-ангелы, интеллектуальная собственность, квалифицированные инвесторы, тщательная проверка инвестиционного проекта, оценка инновационных компаний}
+\logo{\includelogonngurus}%\logo{ННГУ}
+\date{\the\year}
+
+
+\begin{document}
+
+
+\begin{frame}
+\titlepage
+\end{frame}
+\setnextsection{5}
+
+\section{Бизнес-ангелы}
+\subfile{business_angel}
+
+\section{Договор о венчурном финансировании}
+\subfile{venture_contract}
+
+\section{Отбор венчурных проектов}
+\subfile{due_diligence}
+
+\section{Оценка инновационных компаний}
+\subfile{valuation}
+
+\section{Интеллектуальная собственность}
+\subfile{intellectual_property}
+
+% final frame
+\begin{frame}
+\begin{center}
+\huge{Конец}
+\end{center}
+\end{frame}
+
+\end{document}

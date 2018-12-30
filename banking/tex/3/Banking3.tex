@@ -1,0 +1,54 @@
+% !TeX program = lualatex -synctex=1 -interaction=nonstopmode %.tex
+
+\documentclass[12pt]{beamer}
+\RequirePackage[rus]{borochkin_beamer}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\professor
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\AfterPreamble{\hypersetup{
+	pdftitle={Банковское дело},
+}}
+
+\title[Банковское дело]{Банковское дело\\Курс лекций\\Часть 3}
+\author{к.э.н. Александр Александрович Борочкин}
+\institute{Нижегородский государственный университет}
+\subject{Финансы и кредит}
+\keywords{Банковское дело, ликвидность, платежеспособность, банковские операции, вексель, аккредитив, платежное поручение, банковский счет, платежные карты, процентные ставки, кредитная политика, оценка кредитоспособности, кредитный рейтинг, банковские гарантии, драгоценные металлы, факторинг, форфейтинг, лизинг, доверительное управление}
+\logo{\includelogonngurus}%\logo{ННГУ}
+\date{\the\year}
+
+
+\begin{document}
+\begin{frame}
+\titlepage
+\end{frame}
+\setnextsection{9}
+\section{Драгоценные металлы и камни}
+\subfile{precious_metals}
+
+\section{Доверительное управление}
+\subfile{asset_management}
+
+\section{Факторинг и форфейтинг}
+\subfile{factoring}
+
+\section{Обеспечение возвратности кредита}
+\subfile{bank_guarantee}
+
+\section{Лизинг}
+\subfile{leasing}
+
+\section{Рассчетно-кассовое обслуживание}
+\subfile{bank_transfer}
+
+
+% final frame
+\begin{frame}
+\begin{center}
+\huge{Конец}
+\end{center}
+\end{frame}
+
+\end{document}

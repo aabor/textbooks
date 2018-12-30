@@ -1,0 +1,52 @@
+% !TeX program = lualatex -synctex=1 -interaction=nonstopmode --shell-escape %.tex
+\documentclass[beamer,xcolor=dvipsnames]{standalone}
+\RequirePackage[rus]{borochkin_tikz}
+
+\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+
+\begin{document}
+\begin{standaloneframe}[shrink=0, fragile]
+\begin{tikzpicture}
+\tikzset{
+	dot/.style={circle,inner sep=1pt,fill,name=#1},
+}
+% grid 
+%\draw[step=1cm,gray,very thin] (-1.9,-1.9) grid (5.9,5.9);
+
+% Draw axes
+\draw [<->,thick] (0,4.5) node (yaxis) [above]{$P_{GC}$}
+|- (6.5,0) node (xaxis) [right] {$GC$};
+
+\draw (0,4)--(5.9,.1) node[above right, black]{$GC^d$};
+\draw (0,4)--(2.9,.1) node[above right, black]{$MR$};
+
+\draw (0,2)--(5,2) node[anchor=west, black]{$MC_0=ATC_0$};
+
+\coordinate (opt0) at (1.5,3);
+\coordinate (opt01) at (1.5,2);
+
+\draw[dashed] (yaxis |- opt0) node[left] {$P_{GC}^0$}
+-| (xaxis -| opt0) node[below] {$GC^0$};
+
+\fill[pattern=north west lines]  (0,3) rectangle (opt01);
+\node[dot=opt0] at (opt0) {};
+\node[dot=opt01] at (opt01) {};
+
+\onslide<2->{
+	\draw (0,1)--(5,1) node[anchor=west, black]{$MC_1=ATC_1$};
+	
+	\coordinate (opt1) at (2.25,2.5);
+	\coordinate (opt11) at (2.25,1);
+	
+	\draw[dashed] (yaxis |- opt1) node[left] {$P_{GC}^1$}
+	-| (xaxis -| opt1) node[below] {$GC^1$};
+
+	\fill[pattern=north east lines]  (0,2.5) rectangle (opt11);
+	\node[dot=opt0] at (opt1) {};
+	\node[dot=opt01] at (opt11) {};
+}
+\end{tikzpicture}
+
+\end{standaloneframe}
+\end{document}

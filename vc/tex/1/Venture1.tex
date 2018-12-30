@@ -1,0 +1,50 @@
+% !TeX program = lualatex -synctex=1 -interaction=nonstopmode --shell-escape %.tex
+\documentclass[12pt]{beamer}
+\RequirePackage[rus]{borochkin_beamer}
+
+\AfterPreamble{\hypersetup{
+	pdftitle={Основы венчурных инвестиций},
+}}
+
+
+\title[Основы венчурных инвестиций]{Основы венчурных инвестиций\\Курс лекций\\Часть 1}
+\author{к.э.н. Александр Александрович Борочкин}
+\institute{Нижегородский государственный университет}
+\subject{Финансы и кредит}
+\keywords{венчурные инвестиции, венчурные фонды, инновации, конвертируемые облигации, привилегированные конвертируемые акции, нанотехнологии, государственная поддержка, управляющие компании, бизнес-ангелы, интеллектуальная собственность, квалифицированные инвесторы, тщательная проверка инвестиционного проекта, оценка инновационных компаний}
+\logo{\includelogonngurus}%\logo{ННГУ}
+\date{\the\year}
+
+
+\begin{document}
+
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+%\include{Literatura}
+\section*{Литература}
+\subfile{literatura}
+
+\setnextsection{1}
+\section{Понятие венчурных инвестиций}
+\subfile{venture_definition}
+
+\section{Квалифицированные инвесторы}
+\subfile{professional_investors}
+
+\section{Научно-технические циклы}
+\subfile{science_cycles}
+
+\section{Венчурный фонд}
+\subfile{venture_fund}
+
+% final frame
+\begin{frame}
+\begin{center}
+\huge{Конец}
+\end{center}
+\end{frame}
+
+\end{document}

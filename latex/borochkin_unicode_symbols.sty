@@ -1,0 +1,25 @@
+\ProvidesPackage{borochkin_unicode_symbols}
+%\usepackage{graphicx}
+% Shekel
+\DeclareRobustCommand{\NIS}{\includegraphics[height=\fontcharht\font`T]{NIS}}
+\DeclareRobustCommand{\NISbf}{\includegraphics[height=\fontcharht\font`T]{NISbf}}
+\DeclareRobustCommand{\NISit}{\includegraphics[height=\fontcharht\font`T]{NISit}}
+\DeclareRobustCommand{\NISbi}{\includegraphics[height=\fontcharht\font`T]{NISbi}}
+
+% Bitcoin
+\def\bitcoinA{%
+  \leavevmode
+  \vtop{\offinterlineskip %\bfseries
+    \setbox0=\hbox{B}%
+    \setbox2=\hbox to\wd0{\hfil\hskip-.03em
+    \vrule height .3ex width .15ex\hskip .08em
+    \vrule height .3ex width .15ex\hfil}
+    \vbox{\copy2\box0}\box2}}
+
+\newcommand\urouble{\char"20BD }
+\newcommand{\rouble}{\text{\urouble}}
+\newcommand{\rr}[1]{\num{#1}\text{\urouble}}
+
+\usepackage{newunicodechar}
+\newunicodechar{€}{\euro}
+%\newunicodechar{₽}{\rouble}

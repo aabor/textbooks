@@ -1,0 +1,83 @@
+\ProvidesPackage{optionsStyles}
+\tikzset{
+	invisible/.style={opacity=0,text opacity=0},
+	visible on/.style={alt={#1{}{invisible}}},
+	alt/.code args={<#1>#2#3}{%
+		\alt<#1>{\pgfkeysalso{#2}}{\pgfkeysalso{#3}} % \pgfkeysalso doesn't change the path
+	},
+}
+
+\tikzstyle{block} = [rectangle split, 
+rectangle split horizontal, 
+rectangle split parts=2, 
+rectangle split draw splits=true,
+draw, 
+rectangle split part fill={lightgray,white}, minimum height=1.5em, text width=1cm, align=center]
+
+\tikzstyle{timeblock}=[fill=white, rectangle, 
+minimum height=1.5em, minimum width=6em, align=center]
+
+\tikzstyle{tableblock}=[fill=white, rectangle, 
+minimum height=1.5em, minimum width=6em, align=center, draw]
+
+\tikzstyle{optiontreenode}=[space
+,column 1/.style={nodes={cell,minimum width=2em}
+	,text width=6.0em}
+,column 2/.style={nodes={cell,minimum width=2em}}]
+
+\tikzstyle{pricetree}=[yscale=-1
+,cell/.style={rectangle,draw=black}
+,space/.style={matrix of nodes,row sep=-\pgflinewidth,column sep=-\pgflinewidth,column 1/.style={font=\ttfamily}}
+,text depth=0.1ex
+,text height=1.5ex
+,text width=8.5em
+,nodes in empty cells
+,node distance=0.05cm
+,align=right
+,background default draw=black % define default behaviour
+,background default text=gray!20 % define default behaviour
+,background default aspect={solid} % define default behaviour
+,highlight/.style={background draw=black% define modified behaviour
+	,background text=black, % define modified behaviour
+	,background aspect=solid}% define modified behaviour
+]
+
+\tikzstyle{optionpricetree}=[yscale=-1
+,cell/.style={rectangle,draw=black}
+,space/.style={matrix of nodes,row sep=-\pgflinewidth,column sep=-\pgflinewidth,column 1/.style={font=\ttfamily}}
+,text depth=0.1ex
+,text height=1.5ex
+,text width=8.5em
+,nodes in empty cells
+,node distance=0.05cm
+,align=right
+,background default draw=black % define default behaviour
+,background default text=white % define default behaviour
+,background default aspect={solid} % define default behaviour
+,highlight/.style={background draw=black% define modified behaviour
+	,background text=black, % define modified behaviour
+	,background aspect=solid}% define modified behaviour
+]
+
+\newcommand{\optiontreetimecaption}{	% draw help lines
+	%\draw[step=1cm,color=gray] (0,0) grid (16,10);	
+	% draw time blocks
+	\node [timeblock, text width=1.5cm] (time0) at(1.8,0.5)
+	{$t=01.10.2014$};
+	\node [timeblock, right=3cm of time0, text width=2cm] 			(time1) 
+	{$t=$\\01.11.2014};
+	\node [timeblock, right=3cm of time1, text width=2.5cm] 		(time2) 
+	{$t=$\\01.12.2014};
+	% draw time line
+	\draw [->](0,1.5) -- (14.5,1.5);	
+} 
+
+\newcommand{\drawconnectionarrowspricetree}{    
+	\draw [->] (z0.north) -- (z11);
+	\draw [->] (z0.south) -- (z12);
+	\draw [->] (z11.north) -- (z21);
+	\draw [->] (z11.south) -- (z22);
+	\draw [->] (z12.north) -- (z22);
+	\draw [->] (z12.south) -- (z23);
+}
+\newcommand{\aheader}[2]{\action<#1-|alert@#1>{#2}}

@@ -1,0 +1,34 @@
+% !TeX program = lualatex -synctex=1 -interaction=nonstopmode --shell-escape %.tex
+\documentclass[beamer,xcolor=dvipsnames]{standalone}
+\geometry{papersize={10.5cm,3.5cm}}
+\setbeamersize{text margin left=5mm,text margin right=5mm, sidebar width left=0mm} 
+\usepackage{borochkin_unicode_symbols}
+\RequirePackage[rus]{borochkin_tikz}
+
+\begin{document}
+\begin{standaloneframe}[shrink=0, fragile]
+\begin{tikzpicture}
+\tikzstyle{line} = [ draw, -latex']
+\tikzstyle{block} = [draw, fill=white, rectangle, 
+minimum height=1.5em, minimum width=6em, 
+text width=3.5cm,align=center, 
+text height=4ex, text depth=3ex,]
+
+\node (lessor) at (0,0) [block] {Лизингодатель};
+\node (lessee) at (5,0) [block] {Лизингополучатель};
+
+\onslide<2->{
+	\draw[thick, <->] (lessor) to [bend right=30] node[auto,swap] {1} (lessee);	
+}
+\onslide<3->{
+	\draw[thick, ->] (lessor) to [bend left=30] node[auto,swap] {2} (lessee);	
+}
+\onslide<4->{
+	\path [thick, line,rounded corners] (lessee) |- node[below, xshift=1cm] {3} ($(lessee.south east) + (0.5,-0.5)$) |-  (lessee);
+}
+\onslide<5->{
+	\draw[thick, dashed, <-] (lessor) to node[auto,swap] {4} (lessee);	
+}
+\end{tikzpicture}
+\end{standaloneframe}
+\end{document}

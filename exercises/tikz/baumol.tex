@@ -1,0 +1,35 @@
+% !TeX program = lualatex -synctex=1 -interaction=nonstopmode --shell-escape %.tex
+\RequirePackage{luatex85,shellesc}
+
+\documentclass[beamer,xcolor=dvipsnames]{standalone}
+\RequirePackage[rus]{borochkin_tikz}
+
+\begin{document}
+\begin{standaloneframe}[shrink=0, fragile]
+\begin{tikzpicture}
+% grid 
+%\draw[step=1cm,gray,very thin] (-1.9,-1.9) grid (5.9,5.9);
+% axes
+\draw [<->,thick] (0,3.5) node (yaxis) [above]{$TC$}
+|- (6.5,0) node (xaxis) [right] {$C$};
+
+\draw[domain=.1:5,smooth,variable=\x,black, name path=cashcost] 
+plot ({\x},{\x/2}) node[anchor=  west, black]{$\frac{C}{2}\cdot K$};
+
+\draw[domain=1:5,smooth,variable=\x,black, name path=transactioncost] 
+plot ({\x},{2.5/\x}) node[anchor=  west, black]{$\frac{T}{C}\cdot F$};
+
+\draw[domain=1:5,smooth,variable=\x,black, name path=totalcost] 
+plot ({\x},{\x/2 + 2.5/\x}) node[anchor=  west, black]{TC};
+
+\path [name intersections={of=cashcost and transactioncost,by=opt}];
+\draw[dashed] (opt)-| (xaxis -| opt) node[below] {$C^*$};
+\node[dot=opt] at (opt) {};
+
+\path [name path=vline](opt)--++(0,3);
+\draw [dashed, name intersections={of=totalcost and vline}] (opt) -- (intersection-1)node[dot=intersection-1]{}-| (yaxis |- intersection-1) node[left] {$TC^*$};
+
+\end{tikzpicture}
+
+\end{standaloneframe}
+\end{document}

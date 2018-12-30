@@ -1,0 +1,44 @@
+% !TeX program = lualatex -synctex=1 -interaction=nonstopmode %.tex
+
+\documentclass[xcolor=table, color=usenames, dvipsnames]{beamer}
+
+\usepackage{subfiles}
+
+\usepackage[eng]{borochkin_beamer}
+
+\AfterPreamble{\hypersetup{
+	pdftitle={International Finance},
+}}
+
+\title[International Economics]{International Finance\\Lectures. Part 1}
+\author{c.econ.sc.\\ Alexander Borochkin}
+\institute{}
+\subject{Finance and credit}
+\keywords{forex, balance of payments, international firm management, purchasing power parity}
+\logo{\includelogonngueng}
+\date{\the\year}
+
+
+\begin{document}
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+
+\subfile{if_literatura}
+
+
+\subfile{forexintro}
+
+\subfile{monetaryarrangements}
+
+\subfile{balanceofpayments}
+
+\subfile{forwards}
+
+\subfile{options_eng}
+
+\begin{comment}
+\end{comment}
+\end{document}

@@ -1,0 +1,59 @@
+% !TeX program = lualatex -synctex=1 -interaction=nonstopmode --shell-escape %.tex
+\documentclass[beamer,xcolor=dvipsnames]{standalone}
+\usepackage{borochkin_unicode_symbols}
+\RequirePackage[rus]{borochkin_tikz}
+
+\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+
+\begin{document}
+\begin{standaloneframe}[shrink=0, fragile]
+\begin{tikzpicture}
+\tikzstyle{line} = [ draw, -latex']
+\tikzstyle{block} = [draw, fill=white, rectangle, 
+minimum height=1.5em, minimum width=6em, text width=3cm,align=center, text height=3ex, text depth=2ex,]
+
+\coordinate (yd)   at (0,.5);
+\coordinate (xd)   at (0.5,0);
+
+\node (seller) at (2.5,0) [block] {Поставщик};
+\node (guarantee) at (0,-2.5) [block] {Покупатель};
+\node (guarantor) at (5,-2.5) [block] {Банк-гарант};
+
+\onslide<2->{
+	\draw[thick, rounded corners, <->] (seller) -| 
+	node[left,yshift=-1cm]{1}
+	(guarantee);
+}
+
+\onslide<3->{
+	\draw[thick, <->] (guarantee) to node[auto,swap] {2} (guarantor);
+}
+%\draw[thick, line, rounded corners,->] (borrower) 
+%-- node[ xshift=2.2cm] {3} ($(borrower.south)-(yd)$) 
+%-| (creditor);
+\onslide<4->{
+	\draw[thick, rounded corners, ->] ($(guarantee.north) + (xd)$) 
+	-- node[xshift=2cm] {3} ($(guarantee.north) + (yd) +(xd)$) 
+	-| ($(guarantor.north) - (xd)$);
+}
+\onslide<5->{
+	\draw[thick, rounded corners, ->] ($(seller.east) - (0,.25)$)  
+	-| node[left,yshift=-1cm]{4}
+	(guarantor);
+}
+
+\onslide<6->{
+	\draw[thick, rounded corners, <-] ($(seller.east) + (0,.25)$)  
+	-| node[left,yshift=-1cm]{5}
+	($(guarantor.north) + (xd)$);
+}
+
+\onslide<7->{
+	\draw[thick, rounded corners, ->] ($(guarantee.south) + (xd)$) 
+	-- node[xshift=2cm] {6} ($(guarantee.south) - (yd) +(xd)$) 
+	-| ($(guarantor.south) - (xd)$);
+}
+\end{tikzpicture}
+\end{standaloneframe}
+\end{document}

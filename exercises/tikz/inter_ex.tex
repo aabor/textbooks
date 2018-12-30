@@ -1,0 +1,30 @@
+% !TeX program = lualatex -synctex=1 -interaction=nonstopmode --shell-escape %.tex
+\RequirePackage{luatex85,shellesc}
+
+\documentclass{standalone}
+\usepackage{borochkin_tikz}
+
+\begin{document}
+%
+\begin{tikzpicture}
+
+%grid
+\draw [step=1.0,thin,gray!40]  
+      (0,0) grid (6,5);
+\coordinate (C) at (1.5,1.5);
+\coordinate (D) at (1.2,3);
+\fill[blue] (C) circle (2pt);
+\fill[blue] (D) circle (2pt);
+\draw (C)--(D);
+%
+\coordinate (A2) at (5,1);
+\coordinate (B2) at (3.0,4);
+%
+\draw [name path=curve] (A2) to [bend left=20] (B2)node{по русски};
+\path [name path=lineA](C)--++(3,0);
+\path [name path=lineB](D)--++(3,0);
+\draw [name intersections={of=curve and lineA}, red, thick] (C) -- (intersection-1)node[dot=intersection-1]{};
+\draw [name intersections={of=curve and lineB}, blue, thick] (D) -- (intersection-1);
+%
+\end{tikzpicture}
+\end{document} 

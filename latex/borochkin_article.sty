@@ -1,0 +1,44 @@
+\ProvidesPackage{borochkin_article}
+
+\usepackage{subfiles}
+\RequirePackage{ifthen}
+
+\newif\if@loadrus%\@loadrusfalse
+\DeclareOption{rus}{\@loadrustrue}
+\newif\if@loadeng%\@loadrusfalse
+\DeclareOption{eng}{\@loadengtrue}
+
+\ExecuteOptions{rus}
+\ProcessOptions\relax
+
+
+% Always load language packages first
+\if@loadrus
+  \RequirePackage[rus]{borochkin}
+\fi
+
+\if@loadeng
+  \RequirePackage[eng]{borochkin}
+\fi
+
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\usepackage[natbibapa]{apacite}
+
+
+
+\usepackage{enumitem} %use only in article document type
+\usepackage{titlesec}
+\usepackage{multicol}
+\usepackage{fancyhdr}
+
+\AddEnumerateCounter{\Asbuk}{\@Asbuk}{\CYRM}
+\AddEnumerateCounter{\asbuk}{\@asbuk}{\cyrm} 
+%\renewcommand{\theenumi}{(\Asbuk{enumi})}
+%\renewcommand{\labelenumi}{\Asbuk{enumi})}
+
+\newtheorem{thm}{Theorem}[section]
+\theoremstyle{definition}
+\newtheorem{taskrus}[thm]{Задача}
+\newtheorem{taskeng}[thm]{Task}
+
+\endinput

@@ -1,0 +1,83 @@
+\documentclass[tikz]{standalone}%
+\usepackage{tikz}%
+%
+\usepackage{luatex85}%
+\usepackage{menukeys}%
+\usetikzlibrary{graphs}%
+\usetikzlibrary{graphdrawing}%
+\usegdlibrary{trees}%
+\usegdlibrary{layered}%
+\usegdlibrary{circular}%
+%
+\makeatletter
+\newcount\dirtree@lvl
+\newcount\dirtree@plvl
+\newcount\dirtree@clvl
+\def\dirtree@growth{%
+  \ifnum\tikznumberofcurrentchild=1\relax
+  \global\advance\dirtree@plvl by 1
+  \expandafter\xdef\csname dirtree@p@\the\dirtree@plvl\endcsname{\the\dirtree@lvl}
+  \fi
+  \global\advance\dirtree@lvl by 1\relax
+  \dirtree@clvl=\dirtree@lvl
+  \advance\dirtree@clvl by -\csname dirtree@p@\the\dirtree@plvl\endcsname
+  \pgf@xa=\tikzleveldistance
+  \pgf@ya=-\tikzsiblingdistance
+  \pgf@ya=\dirtree@clvl\pgf@ya
+  \pgftransformshift{\pgfqpoint{\the\pgf@xa}{\the\pgf@ya}}%
+  \ifnum\tikznumberofcurrentchild=\tikznumberofchildren
+  \global\advance\dirtree@plvl by -1
+  \fi
+}
+%
+\tikzset{
+  dirtree/.style={
+    growth function=\dirtree@growth,
+    level distance =1.2em,
+    sibling distance =1.2em,
+    growth parent anchor=west,
+%     every node/.style={anchor=west},
+%     every parent node/.style={anchor=south west},
+    every child node/.style={anchor=west},
+    edge from parent path={(\tikzparentnode.south west) ++(0.5*\tikzleveldistance,0) |- (\tikzchildnode\tikzchildanchor)}
+  }
+}
+\makeatother
+%
+\newmenumacro{\nixpath}[/]{hyphenatepathswithfolder}
+\newmenumacro{\nixfile}[/]{hyphenatepaths}
+\newmenumacro{\winpath}[bslash]{hyphenatepathswithfolder}
+\newmenumacro{\winfile}[bslash]{hyphenatepaths}
+%
+\begin{document}%
+\normalsize%
+\begin{tikzpicture}%
+\graph [tree layout, grow'=right]
+ {"00"/"E" -> 
+  {"01"/"\winpath{Genetic}";
+   "02"/"\winpath{Linear_Programming}" -> 
+   {"03"/"\winpath{build}";
+    "04"/"\winfile{Affine_Scaling.pseudo.tex}"};
+   "05"/"\winpath{build}";
+   "06"/"\winfile{Algorithms.tex}";
+   "07"/"\winfile{Genetic.tex}";
+   "08"/"\winfile{input.tex}";
+   "09"/"\winfile{input2.tex}";
+   "10"/"\winfile{input3.tex}"}};%
+\end{tikzpicture}%
+\begin{tikzpicture}%
+\node (00) {\winpath{E:\CheatSheets\Algorithms}}[dirtree]
+ child {node (01) {Genetic}}
+ child {node (02) {\winpath{Linear_Programming}}
+ child {node (03) {\winpath{build}}}
+  child {node (04) {\winfile{Affine_Scaling.pseudo.tex}}}}
+ child {node (05) {\winpath{build}}}
+ child {node (06) {\winfile{Algorithms.tex}}}
+ child {node (07) {\winfile{Genetic.tex}}}
+ child {node (08) {\winfile{input.tex}}}
+ child {node (09) {\winfile{input2.tex}}}
+ child {node (10) {\winfile{input3.tex}}} ;%
+\graph [use existing nodes]
+{06      ->[in=0, out=0, looseness=3] {04     }};%
+\end{tikzpicture}%
+\end{document}

@@ -1,0 +1,310 @@
+% !TeX program = lualatex -synctex=1 -interaction=nonstopmode --shell-escape %.tex
+
+\documentclass[_DKB_p1_Money.tex]{subfiles}
+\begin{document}
+
+\setbeamercovered{invisible}
+
+\subsection{Издержки обращения}
+\begin{frame}{Издержки обращения}
+\begin{block}{Издержки обращения}
+\quad
+- это расходы, связанные с приобретением товаров и услуг, подразделяются на издержки ожидания и трансакционные издержки
+\end{block}
+\begin{itemize}[<+->]
+\item
+Издержки ожидания — это расходы, которые несет индивид по мере увеличения времени до получения необходимого товара
+\item
+Трансакционпые издержки — это расходы, которые индивид несет при совершении торговой сделки
+\end{itemize}
+\end{frame}
+
+\begin{frame}{}
+\begin{figure}
+	\centering
+	\begin{overprint}
+		\forloop{slideno}{1}{\value{slideno} < 4}{%
+			\only<\value{slideno}>{
+				\includegraphics[page=\value{slideno},
+				scale=.7
+				% trim={<left> <lower> <right> <upper>}				
+				,trim={1cm 4cm 4cm 0cm},clip]
+				{tikz/distribution_cost}}}
+	\end{overprint}
+	\vspace*{-1.5em}
+	\caption{\captionf{Издержки обращения}}
+\end{figure}
+\vspace*{-1.5em}
+\begin{itemize}[<+->]
+	\item
+	$C_T$ - издержки обращения;
+	\item
+	$C_W$ - издержки ожидания;
+	\item
+	$C_E$ - общие издержки.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{}
+\begin{figure}
+	\centering
+	\begin{overprint}
+		\forloop{slideno}{1}{\value{slideno} < 2}{%
+			\only<\value{slideno}>{
+				\includegraphics[page=\value{slideno},
+				scale=.8
+				% trim={<left> <lower> <right> <upper>}				
+				,trim={1cm 4cm 4cm 0cm},clip]
+				{tikz/minimum_cost_exchange}}}
+	\end{overprint}
+	\vspace*{-1.5em}
+	\caption{\captionf{Обмен с минимальными издержками}}
+\end{figure}
+\vspace*{-1.5em}
+Минимум издержек ($C^*_E$) достигается, если сделка была совершена за время $T^*$. 
+\end{frame}
+
+
+\begin{frame}{}
+\begin{figure}
+	\centering
+	\begin{overprint}
+		\forloop{slideno}{1}{\value{slideno} < 6}{%
+			\only<\value{slideno}>{
+				\includegraphics[page=\value{slideno},
+				scale=.6
+				% trim={<left> <lower> <right> <upper>}				
+				,trim={0cm 4cm 0cm 0cm},clip]
+				{tikz/barter_to_money_evolution}}}
+	\end{overprint}
+	\vspace*{-2em}
+	\caption{\captionf{Переход от чистого бартера к неразменным деньгам}}
+\end{figure}
+\vspace*{-2em}
+\begin{itemize}
+	\small
+	\item Издержки ожидания не связаны с типом системы торговли, используемой в данной экономике
+	\item Трансакционные издержки существенно меняются в зависимости от используемой системы торговли.
+\end{itemize}
+\end{frame}
+
+
+\subsection{Товарные деньги}
+\begin{frame}{Экономика с системой товарных денег}
+\begin{itemize}
+\item
+Цена золота ($P_G$) определяется количеством единиц товаров и услуг, которые необходимо отдать за одну весовую единицу золота $G_N$.
+
+\item
+Золото имеет два различных применения: оно может использоваться как деньги или в других целях. 
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\begin{figure}
+\center
+	\begin{subfigure}[t]{4cm}
+		\centering
+		%trim={<left> <lower> <right> <upper>}				
+		\includegraphics[trim={0.5cm 4.5cm 6cm 0cm},clip, scale=0.8]{tikz/gold_for_money}
+		\caption{\captionf{для денежных\\ целей $G_M^d$.}}\label{fig:GD_money}	
+	\end{subfigure}
+	\quad
+	\begin{subfigure}[t]{4cm}
+		\centering
+		%trim={<left> <lower> <right> <upper>}				
+		\includegraphics[trim={0.5cm 4.5cm 6cm 0cm},clip, scale=0.8]{tikz/gold_for_industry}
+		\caption{\captionf{для других\\ целей $G_N^d$.}}\label{fig:GD_other}
+	\end{subfigure}
+\caption{\captionf{Кривые спроса на золото.}}\label{fig:gold_demand}
+\end{figure}
+\end{frame}
+
+\begin{frame}{}
+\begin{figure}
+	\centering
+	\begin{overprint}
+		\forloop{slideno}{1}{\value{slideno} < 2}{%
+			\only<\value{slideno}>{
+				\includegraphics[page=\value{slideno},
+				scale=.85
+				% trim={<left> <lower> <right> <upper>}				
+				,trim={0cm 4cm 3cm 0cm},clip]
+				{tikz/gold_total_demand}}}
+	\end{overprint}
+	\vspace*{-2.5em}
+	\caption{\captionf{Кривая совокупного спроса на золото}}
+\end{figure}
+	\vspace*{-1.5em}
+\footnotesize{Кривая совокупного спроса на золото $G^d$ строится суммированием по горизонтали кривых спроса на золото для денежных $G_M^d$ и других целей $G_N^d$.}
+\end{frame}
+
+
+\begin{frame}{}
+\begin{figure}
+	\centering
+	\begin{overprint}
+		\forloop{slideno}{1}{\value{slideno} < 2}{%
+			\only<\value{slideno}>{
+				\includegraphics[page=\value{slideno},
+				scale=.75
+				% trim={<left> <lower> <right> <upper>}				
+				,trim={0cm 4cm 3cm 0cm},clip]
+				{tikz/gold_equilibrium_price}}}
+	\end{overprint}
+	\vspace*{-2.5em}
+	\caption{\captionf{Равновесная цена золота}}
+\end{figure}
+\vspace*{-1.5em}
+\footnotesize{
+	Равновесие на рынке золота возникает, когда совокупный спрос на золото равен совокупному предложению золота. 
+	
+	Это происходит в точке ($G_0,P_G^0$) пересечения графика спроса на золото $G^d$ с  графиком предложения золота $G^s$.}
+\end{frame}
+
+
+\begin{frame}{}
+\begin{figure}
+	\centering
+	\begin{overprint}
+		\forloop{slideno}{1}{\value{slideno} < 3}{%
+			\only<\value{slideno}>{
+				\includegraphics[page=\value{slideno},
+				scale=1
+				% trim={<left> <lower> <right> <upper>}				
+				,trim={0cm 6cm 4cm 0cm},clip]
+				{tikz/new_gold_supply}}}
+	\end{overprint}
+	\vspace*{-2.5em}
+	\caption{\captionf{Открытие нового золотого месторождения}}
+\end{figure}
+\vspace*{-1.5em}
+\footnotesize{
+	Равновесная цена золота уменьшается $P_G^1$, а уровень цен на товары и услуги (обратная величина) – увеличивается, следовательно, возникает инфляция.}
+\end{frame}
+
+
+\begin{frame}{}
+\begin{figure}
+	\centering
+	\begin{overprint}
+		\forloop{slideno}{1}{\value{slideno} < 3}{%
+			\only<\value{slideno}>{
+				\includegraphics[page=\value{slideno},
+				scale=.8
+				% trim={<left> <lower> <right> <upper>}				
+				,trim={0cm 5cm 4cm 0cm},clip]
+				{tikz/new_gold_demand}}}
+	\end{overprint}
+	\vspace*{-2.5em}
+	\caption{\captionf{Влияние роста спроса на золото на цену золота и общий уровень цен товаров и услуг}}
+\end{figure}
+\vspace*{-1.5em}
+\footnotesize{
+	Равновесная цена золота вырастет до величины $P_G^1$, уровень цен на товары и услуги снизится, т. е. произойдет дефляция или рост покупательной способности золотых денег.}
+\end{frame}
+
+
+\subsection{Золотой стандарт}
+\begin{frame}{Система товарного (золотого) стандарта}
+\begin{itemize}
+\item
+Международный золотой стандарт эффективно функционировал с начала XIX в. до первой мировой войны, а в США использовался до 1933 г., всего на два года дольше, чем Великобритания. 
+
+\item
+Введение золотого стандарта означает, что в основу национальной денежной системы положено определенное количество золота, называемого золотым резервом.
+
+\item
+При полном золотом обеспечении обращающихся денег величина золотого резерва образует национальную денежную базу.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Денежная масса в обращении в условиях золотого стандарта}
+
+1) реальное золото в золотом резерве, обычно в форме золотых монет или тщательно взвешенных и промаркированных слитков золота, которые могут служить средством обращения и, следовательно, являются деньгами. 
+
+2) обеспеченные золотом денежные знаки, используемые в качестве средства обращения (обеспеченные золотом монеты, денежные знаки, выпущенные частными банками, или денежные знаки, выпущенные правительством). 
+\end{frame}
+
+\begin{frame}{Товарный стандарт}{Снижение трансакционных издержек}
+1. Денежные знаки, выпущенные частными банками или правительством, гораздо легче использовать как средство платежа, чем тяжелый металл вроде золота.
+
+2. Правительство (или центральный банк) может устанавливать соотношение между количеством банкнот, которое выпускает банк, и золотым резервом, т. е. золотое покрытие. Это означает, что в условиях золотого стандарта правительство может вести определенную политику регулирования количества денег в обращении. 
+\end{frame}
+
+
+\begin{frame}{}
+\begin{figure}
+	\centering
+	\begin{overprint}
+		\forloop{slideno}{1}{\value{slideno} < 2}{%
+			\only<\value{slideno}>{
+				\includegraphics[page=\value{slideno},
+				scale=.6
+				% trim={<left> <lower> <right> <upper>}				
+				,trim={0cm 4cm 3cm 0cm},clip]
+				{tikz/money_monopoly}}}
+	\end{overprint}
+	\vspace*{-2.5em}
+	\caption{\captionf{Монопольная эмиссия денег}}
+\end{figure}
+\vspace*{-1.5em}
+\footnotesize{
+	$GC^d$ — кривая спроса на золотые монеты.
+	
+	Будучи единственным эмитентом золотых монет, правительство может устанавливать любую цену $P_{GC}^*$ на них, определяемую как число товарных единиц в расчете на одну золотую монету.
+	
+	Средние общие издержки \textit{АТС} выпуска золотых монет, постоянны и равны предельным издержкам \textit{МС}.}
+\end{frame}
+
+
+\begin{frame}{}
+\begin{figure}
+	\centering
+	\begin{overprint}
+		\forloop{slideno}{1}{\value{slideno} < 3}{%
+			\only<\value{slideno}>{
+				\includegraphics[page=\value{slideno},
+				scale=.8
+				% trim={<left> <lower> <right> <upper>}				
+				,trim={0cm 4cm 2.5cm 0cm},clip]
+				{tikz/money_falsification}}}
+	\end{overprint}
+	\vspace*{-2.5em}
+	\caption{\captionf{Фальсификация монет и инфляция}}
+\end{figure}
+\vspace*{-1.5em}
+\footnotesize{
+	\onslide<2->{
+		Снижая предельные и средние издержки выпуска денег, фальсификация монет делает для правительства выгодным выпуск их большого количества.
+}}
+\end{frame}
+
+
+\begin{frame}{}
+\begin{figure}
+	\centering
+	\begin{overprint}
+		\forloop{slideno}{1}{\value{slideno} < 2}{%
+			\only<\value{slideno}>{
+				\includegraphics[page=\value{slideno},
+				scale=.7
+				% trim={<left> <lower> <right> <upper>}				
+				,trim={0cm 4cm 2.5cm 0cm},clip]
+				{tikz/money_optimum_supply}}}
+	\end{overprint}
+	\vspace*{-2.5em}
+	\caption{\captionf{Общественно оптимальный выпуск денег}}
+\end{figure}
+\vspace*{-1.5em}
+\footnotesize{
+	Экономика достигает эффективности, если цена золотых монет равна предельным издержкам их выпуска.
+	
+	1. Предоставить частным фирмам право выпуска золотых монет в условиях свободной конкуренции.
+	
+	2. Правительство откажется от монопольной прибыли от эмиссии денег.
+}
+\end{frame}
+
+\setbeamercovered{transparent}
+\end{document}

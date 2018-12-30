@@ -1,0 +1,228 @@
+\ProvidesPackage{borochkin_beamer}
+\usepackage{subfiles}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% package option section
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newif\if@loadrus%\@loadrusfalse
+\DeclareOption{rus}{\@loadrustrue}
+\newif\if@loadeng%\@loadrusfalse
+\DeclareOption{eng}{\@loadengtrue}
+
+\ProcessOptions\relax
+
+
+\if@loadrus{
+\RequirePackage[rus]{borochkin}
+% End load russian  
+\fi
+
+\if@loadeng
+\RequirePackage[eng]{borochkin}
+% End Load english
+\fi
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\definecolor{beamer@nngublue}{rgb}{0.075, 0.506, 0.753}
+\definecolor{beamer@nngudarkblue}{rgb}{0.000, 0.392, 0.659}
+\definecolor{beamer@nngulightblue}{rgb}{0.961 0.961 0.957}
+
+%\setbeamercolor{normal text}{bg=beamer@nngulightblue!70!white}
+
+\usetheme[width=70pt, hideothersubsections]{Berkeley}
+
+\setbeamercolor{structure}{bg=beamer@nngudarkblue}     
+
+\setbeamercolor{title}{bg=beamer@nngulightblue}     
+
+\setbeamercolor{frametitle}{bg=beamer@nngudarkblue}     %controls the color of the headline
+\setbeamercolor{sidebar}{bg=beamer@nngublue}        %controls the color of the sidebar
+\setbeamercolor{logo}{bg=beamer@nngudarkblue!70!black}  %controls the color of the logo area
+\setbeamercolor{titlelike}{parent=structure}
+%\usecolortheme{dolphin}
+%\usecolortheme{darkgray}
+\setbeamercolor{title}{bg=white}% первый, заголовочный слайд, цвета заголовка
+\setbeamercolor{title}{fg=beamer@nngudarkblue}%
+
+\usecolortheme[named=beamer@nngudarkblue]{structure} % окраска маркеров в списках и др. структурных элементов документа
+\newcommand\SetFontSizeInSidebarLarge{\fontsize{6}{6}\selectfont}
+\newcommand\SetFontSizeInSidebarSmall{\fontsize{6}{6}\selectfont}
+
+\setbeamerfont{section in sidebar}{size=\SetFontSizeInSidebarLarge}
+\setbeamerfont{subsection in sidebar}{size=\SetFontSizeInSidebarSmall}
+\setbeamerfont{section in sidebar shaded}{size=\SetFontSizeInSidebarLarge}
+
+\setbeamertemplate{section in toc}[sections numbered]
+\setbeamertemplate{subsection in toc}[subsections numbered]
+
+\defbeamertemplate{subsubsection in toc}{subsubsections numbered}
+{\leavevmode\leftskip=3em%
+ \rlap{\hskip-3em\inserttocsectionnumber.\inserttocsubsectionnumber.\inserttocsubsubsectionnumber}%
+ \inserttocsubsubsection\par}
+ 
+ % Navigation bar
+\addtobeamertemplate{navigation symbols}{}{ \hspace{1em}    \usebeamerfont{footline}%
+    \insertframenumber / \inserttotalframenumber }
+
+% Numbering in beamer
+\setbeamertemplate{section in toc}[sections numbered]
+\setbeamertemplate{section}{\ \thesection\ \insertsectionhead}
+
+\setbeamertemplate{caption}[numbered]{}% Number float-like environments
+\setbeamertemplate{subsubsection in toc}[subsubsections numbered]
+\usepackage{enumerate}
+
+\AfterPreamble{\hypersetup{
+	unicode=true
+	bookmarks=true
+	pdftoolbar=true, % show Acrobat’s toolbar?
+    pdfmenubar=true, % show Acrobat’s menu?	
+	pdfauthor={associate professor of finance and credit chair at the Nizhni Novgrod State University,c. econ. sc. Alexander Borochkin},
+	pdfsubject={Lectures},
+	colorlinks=true,
+    linkcolor=red,  % color of internal links     citecolor=green, % color of links to bibliography
+    filecolor=magenta,% color of file links
+    urlcolor=cyan % color of external links  
+}}
+
+\if@loadrus{
+\AtBeginSection[]{%
+  \begin{frame}<beamer>{Содержание}
+  \tableofcontents[currentsection,currentsubsection, 
+                    hideothersubsections, 
+                    sectionstyle=show/hide]
+  \end{frame}
+  \addtocounter{framenumber}{-1}% If you don't want them to affect the slide number
+}
+%   
+\fi
+
+\if@loadeng
+\AtBeginSection[]{%
+  \begin{frame}<beamer>{Content}
+  \tableofcontents[currentsection,currentsubsection, 
+                    hideothersubsections, 
+                    sectionstyle=show/hide]
+  \end{frame}
+  \addtocounter{framenumber}{-1}% If you don't want them to affect the slide number
+}
+% 
+\fi
+
+
+% numbering sections from specific number
+% must be last
+\makeatletter
+\newcommand{\setnextsection}[1]{%
+  \setcounter{section}{\numexpr#1-1\relax}%
+  \beamer@tocsectionnumber=\numexpr#1-1\relax\space}
+\makeatother
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% redefine itemize command
+\makeatletter
+\renewcommand{\itemize}[1][]{%
+  \beamer@ifempty{#1}{}{\def\beamer@defaultospec{#1}}%
+  \ifnum \@itemdepth >2\relax\@toodeep\else
+    \advance\@itemdepth\@ne
+    \beamer@computepref\@itemdepth% sets \beameritemnestingprefix
+    \usebeamerfont{itemize/enumerate \beameritemnestingprefix body}%
+    \usebeamercolor[fg]{itemize/enumerate \beameritemnestingprefix body}%
+    \usebeamertemplate{itemize/enumerate \beameritemnestingprefix body begin}%
+    \list
+      {\usebeamertemplate{itemize \beameritemnestingprefix item}}
+      {\setlength\itemsep{0em}% NEW
+        \def\makelabel##1{%
+          {%
+            \hss\llap{{%
+                \usebeamerfont*{itemize \beameritemnestingprefix item}%
+                \usebeamercolor[fg]{itemize \beameritemnestingprefix item}##1}}%
+          }%
+        }%
+      }
+  \fi%
+  \beamer@cramped%
+  \raggedright%
+  \beamer@firstlineitemizeunskip%
+}
+\makeatother
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\setbeamertemplate{theorems}[numbered]
+
+
+  % Keys to support piece-wise uncovering of elements in TikZ pictures:
+  % \node[visible on=<2->](foo){Foo}
+  % \node[visible on=<{2,4}>](bar){Bar}   % put braces around comma expressions
+  %
+  % Internally works by setting opacity=0 when invisible, which has the 
+  % adavantage (compared to \node<2->(foo){Foo} that the node is always there, hence
+  % always consumes space plus that coordinate (foo) is always available.
+  %
+  % The actual command that implements the invisibility can be overriden
+  % by altering the style invisible. For instance \tikzsset{invisible/.style={opacity=0.2}}
+  % would dim the "invisible" parts. Alternatively, the color might be set to white, if the
+  % output driver does not support transparencies (e.g., PS) 
+  %
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[absolute,overlay]{textpos} % locate figures with x,y specified location in a presentation
+  \setlength{\TPHorizModule}{1mm}
+  \setlength{\TPVertModule}{1mm}
+
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ %% figures with captions on the side
+\makeatletter
+\newif\ifcaptionsideisleft
+\pgfset{
+  fwcas@/.is family,
+  fwcas@,
+  caption position/.is choice,
+  caption position/c/.code={
+    \def\fwcas@captionposition{c}\def\fwcas@imageposition{c}
+  },
+  caption position/b/.code={
+    \def\fwcas@captionposition{b}\def\fwcas@imageposition{b}
+  },
+  caption position/t/.code={
+    \def\fwcas@captionposition{T}\def\fwcas@imageposition{T}
+  },
+  caption left side@/.is if=captionsideisleft,
+  caption on the left/.style={caption left side@=true},
+  caption on the right/.style={caption left side@=false},
+  caption width/.code={
+    \pgfmathsetmacro\fwcas@captionwidth{#1}
+  },
+  image width/.code={
+    \pgfmathsetmacro\fwcas@imagewidth{#1}
+  },
+  every figurewithcaptionatside/.style={
+    caption position=c,
+    caption on the left,
+    caption width=.3\linewidth,
+    image width=.7\linewidth,
+  },
+}
+\newcommand\figurewithcaptionatside[3][]{
+  \pgfset{fwcas@,every figurewithcaptionatside,#1}
+  \ifcaptionsideisleft
+  \begin{columns}
+    \column[\fwcas@captionposition]{\fwcas@captionwidth pt}
+    #2
+    \column[\fwcas@imageposition]{\fwcas@imagewidth pt}
+    #3
+  \end{columns}
+  \else
+  \begin{columns}
+    \column[\fwcas@imageposition]{\fwcas@imagewidth pt}
+    #3
+    \column[\fwcas@captionposition]{\fwcas@captionwidth pt}
+    #2
+  \end{columns}
+  \fi
+}
+\makeatother
+
+%\setbeamertemplate{caption}{\insertcaption} do not use, tables would be without numbers
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+

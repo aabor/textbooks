@@ -1,0 +1,59 @@
+% !TeX program = lualatex -synctex=1 -interaction=nonstopmode --shell-escape %.tex
+\documentclass[beamer,xcolor=dvipsnames]{standalone}
+\RequirePackage[rus]{borochkin_tikz}
+
+\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+
+\begin{document}
+\begin{standaloneframe}[shrink=0, fragile]
+\begin{tikzpicture}
+% coordinates
+\draw[thick,<->] (0,4.5) node[anchor= east] {Издержки} -- (0,0) -- (4.5,0) 
+node[anchor=north] {Время};
+% optimum points
+\tikzmath{\h1 = 4; \k1 =3.5; 
+	\h2 = 3.75; \k2 =2.5; 
+	\h3 = 3.5; \k3 =2; 
+	\h4 = 3; \k4 =1.25; 
+	\h5 = 2; \k5 =.5; 
+	\dd=.2;
+} 
+\coordinate (opt1)   at (\h1,\k1);
+\coordinate (opt2)   at (\h2,\k2);
+\coordinate (opt3)   at (\h3,\k3);
+\coordinate (opt4)   at (\h4,\k4);
+\coordinate (opt5)   at (\h5,\k5);
+
+\draw[domain=1.5:4.5,smooth,variable=\x,black] plot ({\x},{.2*(\x-\h1)^2+\k1}) node[anchor= south west]{$C_E\text{(чистый бартер)}$};
+\draw[dashed](0,\k1)--(opt1)--(\h1,0);
+\node[dot] at (opt1) {};
+
+\onslide<2->{ \draw[domain=1.25:4.5,smooth,variable=\x,black] plot ({\x},{.15*(\x-\h2)^2+\k2}) node[anchor= south west]{$C_E\text{(организованный бартер)}$};
+	\draw[dashed](0,\k2)--(opt2)--(\h2,0);
+	\node[dot] at (opt2) {};
+	\draw[thick, ->] (\dd,\k1)--(\dd,\k2+\dd/2);
+	\draw[thick, ->] (\h1,\dd)--(\h2+\dd/2,\dd);}
+
+\onslide<3->{\draw[domain=1:4.5,smooth,variable=\x,black] plot ({\x},{.15*(\x-\h3)^2+\k3}) node[anchor= south west]{$C_E\text{(товарные деньги)}$};
+	\draw[dashed](0,\k3)--(opt3)--(\h3,0);
+	\node[dot] at (opt3) {};
+	\draw[thick, ->] (\h2,\dd)--(\h3+\dd/2,\dd);
+	\draw[thick, ->] (\dd,\k2)--(\dd,\k3+\dd/2);}
+
+\onslide<4->{\draw[domain=.75:4.5,smooth,variable=\x,black] plot ({\x},{.15*(\x-\h4)^2+\k4}) node[anchor= south west]{$C_E\text{(товарный стандарт)}$};
+	\draw[dashed](0,\k4)--(opt4)--(\h4,0);
+	\node[dot] at (opt4) {};
+	\draw[thick, ->] (\h3,\dd)--(\h4+\dd/2,\dd);
+	\draw[thick, ->] (\dd,\k3)--(\dd,\k4+\dd/2);}
+
+\onslide<5->{\draw[domain=.5:4.5,smooth,variable=\x,black] plot ({\x},{.1*(\x-\h5)^2+\k5}) node[anchor= south west]{$C_E\text{(неразменные деньги)}$};
+	\draw[dashed](0,\k5)--(opt5)--(\h5,0);
+	\node[dot] at (opt5) {};
+	\draw[thick, ->] (\h4,\dd)--(\h5+\dd/2,\dd);
+	\draw[thick, ->] (\dd,\k4)--(\dd,\k5+\dd/2);}
+
+\end{tikzpicture}
+
+\end{standaloneframe}
+\end{document}
