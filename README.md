@@ -15,3 +15,5 @@ International Finance. Two parts. Exam exercises.
 Основы венчурных инвестиций. В четырех частях. Контрольная работа.
 
 Сборник задач по ценным бумагам, банковскому делу, финансовым рискам.
+
+Bash shell scripts for batch production included.
